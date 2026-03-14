@@ -141,11 +141,11 @@ p{color:var(--mt);line-height:1.8}
 /* ── ABOUT ── */
 #about{background:linear-gradient(180deg,transparent,rgba(255,107,53,0.03) 50%,transparent)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-card-3d{width:100%;aspect-ratio:3/4;max-height:460px;border-radius:24px;background:linear-gradient(145deg,rgba(255,107,53,0.1),rgba(0,212,255,0.08));border:1px solid rgba(255,107,53,0.2);display:flex;align-items:center;justify-content:center;font-size:100px;position:relative;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.5);transform:perspective(600px) rotateY(-10deg);transition:transform 0.5s ease}
+.about-card-3d{width:100%;aspect-ratio:3/4;max-height:960px;border-radius:24px;background:linear-gradient(145deg,rgba(255,107,53,0.1),rgba(0,212,255,0.08));border:1px solid rgba(255,107,53,0.2);display:flex;align-items:center;justify-content:center;font-size:100px;position:relative;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.5);transform:perspective(600px) rotateY(-10deg);transition:transform 0.5s ease}
 .about-card-3d:hover{transform:perspective(600px) rotateY(0deg)}
 .about-card-3d::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 40% 40%,rgba(255,107,53,0.12),transparent 60%)}
-.about-card-3d::after{content:'RAJU';position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:var(--fh);font-size:1.6rem;font-weight:900;letter-spacing:0.2em;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.about-float-badge{position:absolute;bottom:-24px;right:-24px;padding:20px 24px;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.about-card-3d::after{content:'';position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:var(--fh);font-size:1.6rem;font-weight:900;letter-spacing:0.2em;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.about-float-badge{position:absolute;bottom:-24px;right:-24px;padding:20px 24px;border-radius:16px;box-shadow:0 20px 60px rgba(214, 89, 89, 0.5)}
 .afbv{font-family:var(--fh);font-size:2rem;font-weight:900;background:var(--gcool);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
 .afbl{font-size:0.72rem;color:var(--mt);margin-top:4px;font-weight:500}
 .about-highlight{padding:20px 24px;border-radius:12px;border-left:3px solid var(--c1);background:rgba(255,107,53,0.06);margin:24px 0 32px}
@@ -496,7 +496,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
     <div class="about-grid">
       <div class="rev-l">
         <div style="position:relative">
-          <div class="about-card-3d"><img src="image.jpeg"></div>
+          <div class="about-card-3d"><img src="image.png"></div>
           <div class="about-float-badge glass2"><div class="afbv">MCA</div><div class="afbl">Graduate 2026</div></div>
         </div>
       </div>
