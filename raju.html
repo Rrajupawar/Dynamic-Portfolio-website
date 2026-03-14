@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Raju | MCA Graduate · Full-Stack Developer</title>
+<meta name="description" content="Raju — MCA Graduate & Full-Stack Developer. Building modern web apps, mobile solutions and digital experiences."/>
+<meta name="keywords" content="Raju, MCA graduate, full stack developer, React developer, Node.js, portfolio India"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#050510;--bg2:#080820;--bg3:#0c0c28;
+  --sf:rgba(255,255,255,0.04);--sf2:rgba(255,255,255,0.07);
+  --bd:rgba(255,255,255,0.08);--bd2:rgba(255,255,255,0.15);
+  --tx:#f0f0ff;--mt:#8888aa;
+  --c1:#ff6b35;--c2:#f7931e;--c3:#ffcd3c;--c4:#00d4ff;--c5:#b44bff;--c6:#ff4baf;
+  --gfire:linear-gradient(135deg,#ff6b35,#f7931e,#ffcd3c);
+  --gcool:linear-gradient(135deg,#00d4ff,#b44bff);
+  --ghot:linear-gradient(135deg,#ff4baf,#b44bff,#00d4ff);
+  --gfull:linear-gradient(135deg,#ff6b35,#ff4baf,#b44bff,#00d4ff);
+  --gtx:linear-gradient(135deg,#ff6b35 0%,#ff4baf 40%,#00d4ff 100%);
+  --fh:'Orbitron',monospace;--fb:'Outfit',sans-serif;
+  --nh:70px;--r:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--tx);overflow-x:hidden;line-height:1.6}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gfire);border-radius:2px}
+
+/* CURSOR */
+#cur,#cur2{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
+#cur{width:10px;height:10px;background:var(--gfire)}
+#cur2{width:40px;height:40px;border:1.5px solid rgba(255,107,53,0.5);transition:width 0.3s,height 0.3s}
+body.hov #cur{width:20px;height:20px;background:var(--gcool)}
+body.hov #cur2{width:64px;height:64px;border-color:rgba(0,212,255,0.4)}
+@media(hover:none){#cur,#cur2{display:none}body{cursor:auto}}
+
+/* LAYOUT */
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px;position:relative;z-index:2}
+section{padding:120px 0;position:relative;z-index:2}
+@media(max-width:768px){.wrap{padding:0 20px}section{padding:80px 0}}
+
+/* TYPE */
+h1,h2,h3{font-family:var(--fh);font-weight:700;letter-spacing:0.05em}
+h1{font-size:clamp(2.2rem,5.5vw,4.8rem);line-height:1.1}
+h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15}
+h3{font-size:1.1rem}
+p{color:var(--mt);line-height:1.8}
+.gtext{background:var(--gtx);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.g2text{background:var(--gcool);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--c1);margin-bottom:16px}
+.sec-label::before{content:'';width:28px;height:2px;background:var(--gfire);border-radius:1px}
+.sec-label::after{content:'';width:8px;height:2px;background:var(--gfire);border-radius:1px}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:100px;font-family:var(--fb);font-size:0.875rem;font-weight:600;cursor:pointer;border:none;text-decoration:none;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);position:relative;overflow:hidden;letter-spacing:0.02em;white-space:nowrap}
+.btn:hover{transform:translateY(-3px)}
+.btn-glow{background:var(--gfire);color:#fff;box-shadow:0 4px 24px rgba(255,107,53,0.4)}
+.btn-glow:hover{box-shadow:0 8px 40px rgba(255,107,53,0.6)}
+.btn-cool{background:var(--gcool);color:#fff;box-shadow:0 4px 24px rgba(0,212,255,0.3)}
+.btn-cool:hover{box-shadow:0 8px 40px rgba(0,212,255,0.5)}
+.btn-outline{background:transparent;color:var(--tx);border:1.5px solid var(--bd2)}
+.btn-outline:hover{border-color:var(--c1);color:var(--c1)}
+.btn-glass{background:var(--sf2);color:var(--tx);border:1px solid var(--bd2);backdrop-filter:blur(10px)}
+.btn-sm{padding:9px 20px;font-size:0.8rem}
+.btn-danger{background:rgba(220,38,38,0.15);color:#f87171;border:1px solid rgba(220,38,38,0.3)}
+.btn-danger:hover{background:rgba(220,38,38,0.3)}
+.btn-success{background:rgba(22,163,74,0.15);color:#4ade80;border:1px solid rgba(22,163,74,0.3)}
+
+/* GLASS */
+.glass{background:rgba(255,255,255,0.04);border:1px solid var(--bd2);border-radius:var(--r);backdrop-filter:blur(16px)}
+.glass2{background:rgba(255,255,255,0.06);border:1px solid var(--bd);border-radius:var(--r)}
+
+/* ── NAVBAR ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nh);display:flex;align-items:center;padding:0 48px;transition:all 0.4s}
+#nav.solid{background:rgba(5,5,16,0.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--bd);box-shadow:0 4px 32px rgba(0,0,0,0.6)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;width:100%;position:relative;z-index:2}
+.nav-logo{font-family:var(--fh);font-size:1.4rem;font-weight:900;text-decoration:none;letter-spacing:0.1em;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--mt);text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s;position:relative;padding-bottom:4px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;background:var(--gfire);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.nav-links a:hover{color:var(--tx)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-r{display:flex;gap:10px;align-items:center}
+.nav-notify{position:relative;display:none}
+.notify-dot{position:absolute;top:-3px;right:-3px;width:8px;height:8px;background:#ff4baf;border-radius:50%;box-shadow:0 0 8px #ff4baf;animation:npulse 2s infinite}
+@keyframes npulse{0%,100%{transform:scale(1)}50%{transform:scale(1.4)}}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hbg span{display:block;width:22px;height:2px;background:var(--tx);border-radius:1px;transition:all 0.3s}
+.mob-nav{position:fixed;inset:0;z-index:99;background:rgba(5,5,16,0.97);backdrop-filter:blur(24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.77,0,0.175,1)}
+.mob-nav.open{transform:none}
+.mob-nav a{font-family:var(--fh);font-size:1.8rem;font-weight:700;color:var(--tx);text-decoration:none;letter-spacing:0.08em;transition:color 0.2s}
+.mob-nav a:hover{color:var(--c1)}
+.mob-x{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1px solid var(--bd2);background:var(--sf2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--tx)}
+@media(max-width:1000px){#nav{padding:0 20px}.nav-links{display:none}.hbg{display:flex}}
+
+/* ── PARTICLES ── */
+.particles{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.particle{position:absolute;border-radius:50%;animation:pdrift linear infinite}
+@keyframes pdrift{0%{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:0.5}100%{transform:translateY(-110vh) rotate(720deg);opacity:0}}
+
+/* ── HERO ── */
+#home{min-height:100vh;display:flex;align-items:center;padding-top:var(--nh);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.type-cursor{display:inline-block;width:3px;height:1em;background:var(--c1);margin-left:4px;animation:blink-c 0.9s step-end infinite;vertical-align:text-bottom}
+@keyframes blink-c{0%,100%{opacity:1}50%{opacity:0}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.25);border-radius:100px;font-size:0.75rem;font-weight:600;color:var(--c1);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#00ff88;box-shadow:0 0 8px #00ff88;animation:gpulse 2s infinite}
+@keyframes gpulse{0%,100%{box-shadow:0 0 8px #00ff88}50%{box-shadow:0 0 2px #00ff88}}
+.hero-h1{line-height:1.1;margin-bottom:10px}
+.hero-role{font-family:var(--fh);font-size:clamp(0.9rem,2vw,1.4rem);font-weight:400;color:var(--mt);margin-bottom:24px;letter-spacing:0.1em}
+.hero-desc{font-size:1rem;line-height:1.8;max-width:480px;margin-bottom:40px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+.hero-facts{display:flex;gap:32px;padding-top:32px;border-top:1px solid var(--bd)}
+.hfn{font-family:var(--fh);font-size:2rem;font-weight:900;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.hfl{font-size:0.72rem;color:var(--mt);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:0.06em}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.avatar-3d{position:relative;width:340px;height:380px;animation:float3d 6s ease-in-out infinite}
+@keyframes float3d{0%,100%{transform:perspective(800px) rotateY(-6deg) rotateX(2deg)}33%{transform:perspective(800px) rotateY(6deg) rotateX(-2deg)}66%{transform:perspective(800px) rotateY(0deg) rotateX(4deg)}}
+.av-main{width:100%;height:100%;border-radius:24px;background:linear-gradient(145deg,rgba(255,107,53,0.15),rgba(180,75,255,0.15),rgba(0,212,255,0.15));border:1px solid rgba(255,107,53,0.2);display:flex;align-items:center;justify-content:center;font-size:120px;position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.1)}
+.av-ring{position:absolute;width:110%;height:110%;border-radius:50%;border:1px solid rgba(255,107,53,0.12);animation:spin-r 12s linear infinite}
+.av-ring2{position:absolute;width:130%;height:130%;border-radius:50%;border:1px dashed rgba(0,212,255,0.1);animation:spin-r 20s linear infinite reverse}
+@keyframes spin-r{to{transform:rotate(360deg)}}
+.av-chip{position:absolute;padding:8px 14px;border-radius:10px;font-size:0.72rem;font-weight:700;display:flex;align-items:center;gap:6px;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,0.4);animation:cfloat 4s ease-in-out infinite}
+.av-chip:nth-child(3){animation-delay:0.5s}.av-chip:nth-child(4){animation-delay:1s}.av-chip:nth-child(5){animation-delay:1.5s}.av-chip:nth-child(6){animation-delay:2s}
+@keyframes cfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.chip-1{top:-18px;left:-30px;background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.3);color:var(--c1)}
+.chip-2{top:60px;right:-40px;background:rgba(0,212,255,0.12);border:1px solid rgba(0,212,255,0.25);color:var(--c4)}
+.chip-3{bottom:80px;left:-40px;background:rgba(180,75,255,0.12);border:1px solid rgba(180,75,255,0.25);color:var(--c5)}
+.chip-4{bottom:-20px;right:-20px;background:rgba(255,75,175,0.12);border:1px solid rgba(255,75,175,0.25);color:var(--c6)}
+.cdot{width:7px;height:7px;border-radius:50%}
+.cdo{background:var(--c1);box-shadow:0 0 6px var(--c1)}.cdb{background:var(--c4);box-shadow:0 0 6px var(--c4)}.cdp{background:var(--c5);box-shadow:0 0 6px var(--c5)}.cdpk{background:var(--c6);box-shadow:0 0 6px var(--c6)}
+.orbit-wrap{position:absolute;inset:-30px;border-radius:50%;animation:orbit-sp 8s linear infinite}
+@keyframes orbit-sp{to{transform:rotate(360deg)}}
+.orbit-dot{position:absolute;top:0;left:50%;width:10px;height:10px;border-radius:50%;background:var(--gcool);box-shadow:0 0 16px var(--c4);transform:translate(-50%,-50%)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{display:none}}
+
+/* ── ABOUT ── */
+#about{background:linear-gradient(180deg,transparent,rgba(255,107,53,0.03) 50%,transparent)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-card-3d{width:100%;aspect-ratio:3/4;max-height:460px;border-radius:24px;background:linear-gradient(145deg,rgba(255,107,53,0.1),rgba(0,212,255,0.08));border:1px solid rgba(255,107,53,0.2);display:flex;align-items:center;justify-content:center;font-size:100px;position:relative;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.5);transform:perspective(600px) rotateY(-10deg);transition:transform 0.5s ease}
+.about-card-3d:hover{transform:perspective(600px) rotateY(0deg)}
+.about-card-3d::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 40% 40%,rgba(255,107,53,0.12),transparent 60%)}
+.about-card-3d::after{content:'RAJU';position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:var(--fh);font-size:1.6rem;font-weight:900;letter-spacing:0.2em;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.about-float-badge{position:absolute;bottom:-24px;right:-24px;padding:20px 24px;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.afbv{font-family:var(--fh);font-size:2rem;font-weight:900;background:var(--gcool);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.afbl{font-size:0.72rem;color:var(--mt);margin-top:4px;font-weight:500}
+.about-highlight{padding:20px 24px;border-radius:12px;border-left:3px solid var(--c1);background:rgba(255,107,53,0.06);margin:24px 0 32px}
+.about-highlight p{color:var(--tx);font-style:italic;font-size:0.95rem;margin:0}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
+.info-item{padding:12px 16px;border-radius:10px}
+.ikey{font-size:0.7rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:3px}
+.ival{font-size:0.88rem;font-weight:600;color:var(--tx)}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:48px}}
+
+/* ── SKILLS ── */
+#skills{background:var(--bg2)}
+.skills-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.s-tab{padding:8px 22px;border-radius:100px;font-size:0.8rem;font-weight:600;cursor:pointer;border:1.5px solid var(--bd2);background:transparent;color:var(--mt);transition:all 0.25s;letter-spacing:0.04em}
+.s-tab.active{background:var(--gfire);color:#fff;border-color:transparent;box-shadow:0 4px 20px rgba(255,107,53,0.35)}
+.skill-panel{display:none}.skill-panel.active{display:block}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
+.skill-card{padding:24px 20px;border-radius:16px;text-align:center;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);cursor:default}
+.skill-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 60px rgba(0,0,0,0.4)}
+.sk-icon{font-size:2.4rem;margin-bottom:14px;display:block}
+.sk-name{font-size:0.82rem;font-weight:700;color:var(--tx);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.06em}
+.sk-bar{height:4px;background:var(--bd);border-radius:2px;overflow:hidden;margin:0 auto;max-width:80px}
+.sk-fill{height:100%;border-radius:2px;transition:width 1.2s ease;width:0%}
+.sk-pct{font-size:0.7rem;color:var(--mt);margin-top:6px}
+
+/* ── SERVICES ── */
+#services{}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.srv-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.srv-grid{grid-template-columns:1fr}}
+.srv-card{padding:36px 28px;border-radius:20px;position:relative;overflow:hidden;transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+.srv-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:20px 20px 0 0;transition:opacity 0.3s}
+.srv-card:hover{transform:translateY(-10px);box-shadow:0 32px 80px rgba(0,0,0,0.5)}
+.srv-c1::after{background:var(--gfire)}.srv-c2::after{background:var(--gcool)}.srv-c3::after{background:var(--ghot)}
+.srv-c4::after{background:var(--gfire)}.srv-c5::after{background:var(--gcool)}.srv-c6::after{background:var(--ghot)}
+.srv-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:20px}
+.si-fire{background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.25)}
+.si-cool{background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.2)}
+.si-hot{background:rgba(180,75,255,0.1);border:1px solid rgba(180,75,255,0.2)}
+.srv-card h3{color:var(--tx);margin-bottom:10px;font-size:1rem}
+.srv-card>p{font-size:0.85rem;line-height:1.7;margin-bottom:16px}
+.srv-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.srv-tag{padding:3px 10px;border-radius:100px;font-size:0.68rem;font-weight:700;background:rgba(255,255,255,0.06);border:1px solid var(--bd);color:var(--mt)}
+
+/* ── PROJECTS ── */
+#projects{background:var(--bg2)}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.proj-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.proj-grid{grid-template-columns:1fr}}
+.proj-card{border-radius:20px;overflow:hidden;transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+.proj-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 40px 100px rgba(0,0,0,0.6)}
+.proj-thumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden}
+.pt-1{background:linear-gradient(135deg,rgba(255,107,53,0.3),rgba(255,205,60,0.2))}
+.pt-2{background:linear-gradient(135deg,rgba(0,212,255,0.25),rgba(180,75,255,0.2))}
+.pt-3{background:linear-gradient(135deg,rgba(255,75,175,0.25),rgba(180,75,255,0.2))}
+.pt-4{background:linear-gradient(135deg,rgba(255,107,53,0.2),rgba(255,75,175,0.2))}
+.pt-5{background:linear-gradient(135deg,rgba(0,212,255,0.2),rgba(255,107,53,0.15))}
+.pt-6{background:linear-gradient(135deg,rgba(180,75,255,0.25),rgba(255,205,60,0.15))}
+.proj-overlay{position:absolute;inset:0;background:rgba(5,5,16,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;opacity:0;transition:opacity 0.3s}
+.proj-card:hover .proj-overlay{opacity:1}
+.proj-tag{position:absolute;top:12px;right:12px;padding:4px 12px;border-radius:100px;font-size:0.65rem;font-weight:800;background:rgba(5,5,16,0.7);border:1px solid var(--bd2);color:var(--tx);letter-spacing:0.06em;text-transform:uppercase;backdrop-filter:blur(8px)}
+.proj-body{padding:22px 24px;background:var(--sf)}
+.proj-body h3{color:var(--tx);margin-bottom:8px;font-size:1rem}
+.proj-body p{font-size:0.82rem;line-height:1.65;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.proj-tech{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+.pt-tag{padding:2px 9px;border-radius:100px;font-size:0.65rem;font-weight:700;letter-spacing:0.04em;background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.2);color:var(--c1)}
+.proj-links{display:flex;gap:8px}
+.proj-empty{grid-column:1/-1;text-align:center;padding:80px 24px;color:var(--mt)}
+.proj-skeleton{border-radius:20px;overflow:hidden}
+.skel{background:linear-gradient(90deg,var(--sf) 25%,var(--sf2) 50%,var(--sf) 75%);background-size:200% 100%;animation:skelanim 1.5s infinite;border-radius:8px}
+@keyframes skelanim{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ── TESTIMONIALS ── */
+#testimonials{overflow:hidden}
+.testi-track-wrap{overflow:hidden;position:relative}
+.testi-track-wrap::before,.testi-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:3;pointer-events:none}
+.testi-track-wrap::before{left:0;background:linear-gradient(to right,var(--bg),transparent)}
+.testi-track-wrap::after{right:0;background:linear-gradient(to left,var(--bg),transparent)}
+.testi-track{display:flex;gap:24px;animation:tscroll 30s linear infinite;width:max-content}
+.testi-track:hover{animation-play-state:paused}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.testi-card{width:320px;flex-shrink:0;padding:28px;border-radius:20px;transition:transform 0.3s}
+.testi-card:hover{transform:translateY(-4px)}
+.testi-stars{color:var(--c3);font-size:0.9rem;margin-bottom:14px;letter-spacing:2px}
+.testi-text{font-size:0.875rem;line-height:1.75;color:var(--mt);margin-bottom:20px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.ta1{background:rgba(255,107,53,0.2)}.ta2{background:rgba(0,212,255,0.15)}.ta3{background:rgba(180,75,255,0.15)}.ta4{background:rgba(255,75,175,0.15)}.ta5{background:rgba(255,205,60,0.15)}
+.testi-name{font-size:0.85rem;font-weight:700;color:var(--tx)}
+.testi-role{font-size:0.72rem;color:var(--mt)}
+
+/* ── BLOG ── */
+#blog{background:var(--bg2)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr}}
+.blog-card{border-radius:20px;overflow:hidden;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);cursor:pointer}
+.blog-card:hover{transform:translateY(-8px);box-shadow:0 32px 80px rgba(0,0,0,0.5)}
+.blog-thumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden}
+.bt-1{background:linear-gradient(135deg,rgba(255,107,53,0.2),rgba(255,205,60,0.15))}
+.bt-2{background:linear-gradient(135deg,rgba(0,212,255,0.2),rgba(180,75,255,0.15))}
+.bt-3{background:linear-gradient(135deg,rgba(255,75,175,0.2),rgba(180,75,255,0.15))}
+.blog-cat{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:0.65rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase}
+.bc-fire{background:rgba(255,107,53,0.2);border:1px solid rgba(255,107,53,0.3);color:var(--c1)}
+.bc-cool{background:rgba(0,212,255,0.15);border:1px solid rgba(0,212,255,0.25);color:var(--c4)}
+.bc-hot{background:rgba(180,75,255,0.15);border:1px solid rgba(180,75,255,0.25);color:var(--c5)}
+.blog-body{padding:22px 24px;background:var(--sf)}
+.blog-meta{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.blog-date{font-size:0.7rem;color:var(--mt);font-weight:500}
+.blog-read{font-size:0.7rem;color:var(--c4)}
+.blog-body h3{color:var(--tx);font-size:0.95rem;margin-bottom:8px;line-height:1.4}
+.blog-body p{font-size:0.82rem;line-height:1.65;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.blog-link{font-size:0.78rem;color:var(--c1);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.blog-link:hover{gap:10px}
+.blog-views{font-size:0.7rem;color:var(--mt);margin-left:auto}
+
+/* ── RESUME ── */
+#resume{background:linear-gradient(135deg,rgba(255,107,53,0.04),rgba(0,212,255,0.04))}
+.resume-inner{max-width:800px;margin:0 auto;text-align:center}
+.resume-mock{border-radius:20px;padding:40px;text-align:left;margin:0 auto 40px}
+.rm-name{font-family:var(--fh);font-size:1.8rem;font-weight:900;letter-spacing:0.08em;margin-bottom:4px;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rm-title{font-size:0.85rem;color:var(--c4);font-weight:600;letter-spacing:0.08em;margin-bottom:20px;text-transform:uppercase}
+.rm-divider{height:1px;background:var(--bd);margin:20px 0}
+.rm-sec-title{font-size:0.65rem;font-weight:800;color:var(--c1);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px}
+.rm-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.rm-chip{padding:4px 12px;border-radius:100px;font-size:0.72rem;font-weight:700;background:rgba(255,255,255,0.06);border:1px solid var(--bd);color:var(--mt)}
+.dl-count{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);border-radius:100px;font-size:0.82rem;color:var(--c4);margin-bottom:28px;font-weight:600}
+
+/* ── CONTACT ── */
+#contact{position:relative;overflow:hidden}
+.contact-glow{position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(255,107,53,0.06) 0%,transparent 65%);pointer-events:none}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+.c-item{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--bd)}
+.c-icon{width:44px;height:44px;flex-shrink:0;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.ci-fire{background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.2)}
+.ci-cool{background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.2)}
+.ci-hot{background:rgba(180,75,255,0.1);border:1px solid rgba(180,75,255,0.2)}
+.ci-pk{background:rgba(255,75,175,0.1);border:1px solid rgba(255,75,175,0.2)}
+.ci-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--mt);margin-bottom:3px}
+.ci-val{font-size:0.9rem;font-weight:600;color:var(--tx)}
+.soc-row{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
+.soc-btn{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;text-decoration:none;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1)}
+.soc-btn:hover{transform:scale(1.15) translateY(-3px)}
+.sb-gh{background:rgba(255,255,255,0.08);border:1px solid var(--bd2);color:var(--tx)}
+.sb-li{background:rgba(0,119,181,0.15);border:1px solid rgba(0,119,181,0.3);color:#0a66c2}
+.sb-tw{background:rgba(29,161,242,0.1);border:1px solid rgba(29,161,242,0.2);color:#1da1f2}
+.sb-wa{background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.2);color:#25d366}
+.avail-card{padding:24px;border-radius:16px;margin-top:32px;border:1px solid rgba(0,255,136,0.2)}
+.avail-dot{width:10px;height:10px;border-radius:50%;background:#00ff88;box-shadow:0 0 10px #00ff88;animation:gpulse 2s infinite}
+.contact-form{padding:36px;border-radius:24px}
+.cf-title{font-size:1.05rem;font-weight:700;color:var(--tx);margin-bottom:6px;font-family:var(--fh);letter-spacing:0.05em}
+.cf-sub{font-size:0.82rem;color:var(--mt);margin-bottom:28px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf-group{margin-bottom:16px}
+.cf-group label{display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--mt);margin-bottom:8px}
+.cf-group input,.cf-group select,.cf-group textarea{width:100%;padding:12px 16px;background:rgba(255,255,255,0.05);border:1.5px solid var(--bd2);border-radius:10px;color:var(--tx);font-family:var(--fb);font-size:0.9rem;transition:all 0.2s;outline:none;appearance:none}
+.cf-group input:focus,.cf-group select:focus,.cf-group textarea:focus{border-color:var(--c1);background:rgba(255,107,53,0.05);box-shadow:0 0 0 4px rgba(255,107,53,0.1)}
+.cf-group textarea{resize:vertical;min-height:110px}
+.cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(136,136,170,0.5)}
+.cf-group select option{background:var(--bg2);color:var(--tx)}
+.field-error{border-color:#f87171 !important;box-shadow:0 0 0 4px rgba(248,113,113,0.1) !important}
+.cf-submit{width:100%;justify-content:center;padding:15px;font-size:0.9rem;margin-top:4px}
+.form-success-wrap{display:none;text-align:center;padding:48px 20px}
+.form-success-wrap.show{display:block}
+.fsw-icon{font-size:4rem;animation:pop 0.5s cubic-bezier(0.34,1.56,0.64,1);margin-bottom:16px}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.fsw-wrap h3{color:var(--tx);margin-bottom:8px;font-size:1.3rem}
+.fsw-wrap p{margin-bottom:24px}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:48px}}
+@media(max-width:600px){.cf-row{grid-template-columns:1fr}}
+
+/* ── ADMIN MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:800;background:rgba(0,0,0,0.8);backdrop-filter:blur(16px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#0d0d1e;border:1px solid var(--bd2);border-radius:24px;padding:36px;width:100%;max-width:480px;position:relative;box-shadow:0 40px 120px rgba(0,0,0,0.8);animation:modal-pop 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+@keyframes modal-pop{from{transform:scale(0.85) translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;background:var(--sf2);border:1px solid var(--bd2);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--mt);transition:all 0.2s}
+.modal-close:hover{background:var(--c1);color:#fff}
+.auth-err{font-size:0.82rem;padding:10px 14px;border-radius:10px;margin-bottom:12px;display:none;color:#f87171;background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2)}
+
+/* ── ADMIN DASHBOARD ── */
+.admin-dash{position:fixed;inset:0;z-index:700;background:var(--bg);overflow-y:auto;display:none}
+.admin-dash.open{display:block}
+.dash-nav{padding:0 40px;height:64px;background:#0d0d1e;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.dash-logo{font-family:var(--fh);font-size:1.2rem;font-weight:900;letter-spacing:0.1em;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.dash-body{padding:36px 40px;max-width:1200px;margin:0 auto}
+.dash-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:36px}
+.dash-stat{padding:20px 24px;border-radius:16px}
+.dsn{font-family:var(--fh);font-size:2rem;font-weight:900;line-height:1;margin-bottom:4px}
+.dsl{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--mt)}
+.dash-tabs{display:flex;gap:4px;margin-bottom:32px;padding:4px;background:var(--sf);border-radius:12px;border:1px solid var(--bd)}
+.dash-tab{padding:8px 20px;border-radius:9px;font-size:0.8rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--mt);transition:all 0.2s;font-family:var(--fb);letter-spacing:0.03em}
+.dash-tab.active{background:var(--gfire);color:#fff}
+.dash-panel{display:none}.dash-panel.active{display:block}
+.dash-grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.d-panel{padding:28px;border-radius:20px}
+.d-panel h3{color:var(--tx);margin-bottom:20px;font-size:1rem;font-family:var(--fh);letter-spacing:0.05em}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--mt);padding:10px 12px;text-align:left;border-bottom:1px solid var(--bd)}
+td{font-size:0.83rem;color:var(--tx);padding:12px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+tr:hover td{background:rgba(255,255,255,0.02)}
+.status-badge{display:inline-block;padding:2px 10px;border-radius:100px;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em}
+.s-new{background:rgba(255,107,53,0.15);color:var(--c1)}
+.s-read{background:rgba(0,212,255,0.1);color:var(--c4)}
+.s-replied{background:rgba(22,163,74,0.1);color:#4ade80}
+.form-msg{font-size:0.82rem;padding:10px 14px;border-radius:10px;margin-bottom:14px;display:none}
+.msg-ok{display:block;color:#4ade80;background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.2)}
+.msg-err{display:block;color:#f87171;background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2)}
+.d-input{width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1.5px solid var(--bd2);border-radius:10px;color:var(--tx);font-family:var(--fb);font-size:0.88rem;outline:none;margin-bottom:12px;transition:border-color 0.2s;appearance:none}
+.d-input:focus{border-color:var(--c1)}
+.d-input::placeholder{color:rgba(136,136,170,0.4)}
+.d-input option{background:var(--bg2)}
+.d-textarea{min-height:80px;resize:vertical}
+.dash-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:900px){.dash-stats{grid-template-columns:repeat(2,1fr)}.dash-grid2{grid-template-columns:1fr}.dash-body{padding:24px 20px}}
+
+/* ── FOOTER ── */
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:60px;margin-bottom:48px}
+.footer-logo{font-family:var(--fh);font-size:2rem;font-weight:900;letter-spacing:0.1em;margin-bottom:14px;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-desc{font-size:0.85rem;color:var(--mt);line-height:1.75;max-width:280px;margin-bottom:20px}
+.footer-col-title{font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--mt);margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{color:rgba(136,136,170,0.6);font-size:0.85rem;text-decoration:none;transition:color 0.2s}
+.footer-col ul a:hover{color:var(--c1)}
+.footer-bottom{padding-top:28px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:0.78rem;color:rgba(136,136,170,0.35)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:32px}}
+
+/* WHATSAPP */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:1.7rem;text-decoration:none;box-shadow:0 8px 32px rgba(37,211,102,0.45);transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)}
+.wa-btn:hover{transform:scale(1.15);box-shadow:0 14px 48px rgba(37,211,102,0.65)}
+.wa-tip{position:absolute;right:68px;background:var(--bg2);border:1px solid var(--bd2);color:var(--tx);font-size:0.72rem;font-weight:700;padding:6px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s}
+.wa-btn:hover .wa-tip{opacity:1}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(36px);transition:opacity 0.8s ease,transform 0.8s ease}
+.rev.d1{transition-delay:0.1s}.rev.d2{transition-delay:0.2s}.rev.d3{transition-delay:0.3s}.rev.d4{transition-delay:0.4s}
+.rev.show{opacity:1;transform:none}
+.rev-l{opacity:0;transform:translateX(-40px);transition:opacity 0.8s ease,transform 0.8s ease}.rev-l.show{opacity:1;transform:none}
+.rev-r{opacity:0;transform:translateX(40px);transition:opacity 0.8s ease,transform 0.8s ease}.rev-r.show{opacity:1;transform:none}
+.rev-s{opacity:0;transform:scale(0.92);transition:opacity 0.7s ease,transform 0.7s ease}.rev-s.show{opacity:1;transform:none}
+.sec-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,107,53,0.3),rgba(0,212,255,0.3),transparent);margin:0}
+
+/* TOAST */
+.toast{position:fixed;top:90px;right:24px;z-index:9998;padding:14px 20px;border-radius:14px;font-size:0.85rem;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,0.5);transform:translateX(120%);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);display:flex;align-items:center;gap:10px;max-width:320px}
+.toast.show{transform:none}
+.toast-ok{background:#0d1f14;border:1px solid rgba(74,222,128,0.3);color:#4ade80}
+.toast-err{background:#1f0d0d;border:1px solid rgba(248,113,113,0.3);color:#f87171}
+.toast-info{background:#0d1327;border:1px solid rgba(0,212,255,0.3);color:var(--c4)}
+</style>
+</head>
+<body>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Cursor -->
+<div id="cur"></div><div id="cur2"></div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/919972989629" class="wa-btn" target="_blank" id="waBtn">
+  <span class="wa-tip">Let's chat! 💬</span>💬
+</a>
+
+<!-- Particles -->
+<div class="particles" id="particles"></div>
+
+<!-- ════════════ NAVBAR ════════════ -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#home" class="nav-logo">RAJU<span style="color:var(--c4)"></span></a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-r">
+      <!-- Notification bell (shows when admin logged in with new contacts) -->
+      <div class="nav-notify" id="navNotify">
+        <button class="btn btn-glass btn-sm" onclick="openAdminDash()" style="padding:8px 16px;gap:6px">🔔 <span id="notifyCount">0</span> new</button>
+        <div class="notify-dot"></div>
+      </div>
+      <a href="#resume" class="btn btn-glow btn-sm" id="navResBtn" style="display:none">Resume ↓</a>
+      <button class="hbg" onclick="openMob()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <button class="mob-x" onclick="closeMob()">✕</button>
+  <a href="#home" onclick="closeMob()">Home</a>
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#skills" onclick="closeMob()">Skills</a>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#projects" onclick="closeMob()">Projects</a>
+  <a href="#blog" onclick="closeMob()">Blog</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <a href="#resume" class="btn btn-glow" onclick="closeMob()" style="margin-top:12px">Download Resume ↓</a>
+</div>
+
+<!-- ════════════ HERO ════════════ -->
+<section id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge rev">🎓 MCA Graduate · Open to Opportunities</div>
+        <h1 class="hero-h1 rev d1">Hi, I'm <span class="gtext">Raju</span><br><span id="typeTarget" class="g2text"></span><span class="type-cursor"></span></h1>
+        <div class="hero-role rev d2">Full-Stack Developer &amp; Creative Technologist</div>
+        <p class="hero-desc rev d3">MCA Graduate passionate about building modern, scalable web applications and digital experiences. I turn ideas into impactful products.</p>
+        <div class="hero-btns rev d4">
+          <a href="#projects" class="btn btn-glow">View My Work ↗</a>
+          <a href="#contact" class="btn btn-cool">Hire Me 🚀</a>
+          <a href="#resume" class="btn btn-outline">Resume ↓</a>
+        </div>
+        <div class="hero-facts rev d4">
+          <div><div class="hfn">5</div><div class="hfl">Projects</div></div>
+          <div><div class="hfn">5+</div><div class="hfl">Technologies</div></div>
+          <div><div class="hfn">MCA</div><div class="hfl">Graduate</div></div>
+        </div>
+      </div>
+      <div class="hero-visual rev-s d2">
+        <div class="avatar-3d">
+          <div class="av-ring"></div><div class="av-ring2"></div>
+          <div class="av-main"></div>
+          <div class="orbit-wrap"><div class="orbit-dot"></div></div>
+          <div class="av-chip chip-1"><div class="cdot cdo"></div>React Dev</div>
+          <div class="av-chip chip-2"><div class="cdot cdb"></div>Node.js</div>
+          <div class="av-chip chip-3"><div class="cdot cdp"></div>Python</div>
+          <div class="av-chip chip-4"><div class="cdot cdpk"></div>JS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ ABOUT ════════════ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="rev-l">
+        <div style="position:relative">
+          <div class="about-card-3d"><img src="c:\Users\Lenovo\Downloads\image.jpeg" alt="Raju"></div>
+          <div class="about-float-badge glass2"><div class="afbv">MCA</div><div class="afbl">Graduate 2026</div></div>
+        </div>
+      </div>
+      <div class="rev-r">
+        <span class="sec-label">About Me</span>
+        <h2>Passionate Developer<br><span class="gtext">Building the Future</span></h2>
+        <p style="margin-top:20px">I'm Raju, an MCA graduate with a deep passion for technology and software development. I specialise in building modern web applications and mobile solutions that make a real difference.</p>
+        <p style="margin-top:12px">During my MCA programme, I gained strong foundations in data structures, algorithms, database management, and software engineering — combined with hands-on project experience.</p>
+        <div class="about-highlight glass2"><p>"I believe great software isn't just about clean code — it's about solving real problems elegantly and making users' lives easier."</p></div>
+        <div class="info-grid">
+          <div class="info-item glass2"><div class="ikey">Degree</div><div class="ival">MCA — Master of CS</div></div>
+          <div class="info-item glass2"><div class="ikey">Specialisation</div><div class="ival">Full-Stack Dev</div></div>
+          <div class="info-item glass2"><div class="ikey">Location</div><div class="ival">India 🇮🇳</div></div>
+          <div class="info-item glass2"><div class="ikey">Status</div><div class="ival" style="color:#00ff88">Open to Work ✓</div></div>
+          <div class="info-item glass2"><div class="ikey">Languages</div><div class="ival">English, Hindi</div></div>
+          <div class="info-item glass2"><div class="ikey">Interests</div><div class="ival">AI/ML, Open Source</div></div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#contact" class="btn btn-glow">Let's Connect →</a>
+          <a href="#skills" class="btn btn-outline">My Skills</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ SKILLS ════════════ -->
+<section id="skills">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px" class="rev">
+      <span class="sec-label">Technical Skills</span>
+      <h2>Technologies I <span class="gtext">Master</span></h2>
+      <p style="margin-top:14px">From frontend to backend, databases to deployment — my complete technical toolkit.</p>
+    </div>
+    <div class="skills-tabs rev d1">
+      <button class="s-tab active" onclick="switchTab('frontend',this)">Frontend</button>
+      <button class="s-tab" onclick="switchTab('backend',this)">Backend</button>
+      <button class="s-tab" onclick="switchTab('database',this)">Database</button>
+      <button class="s-tab" onclick="switchTab('tools',this)">Tools</button>
+      <button class="s-tab" onclick="switchTab('mobile',this)">Mobile</button>
+    </div>
+    <div class="skill-panel active" id="tab-frontend">
+      <div class="skills-grid">
+        <div class="skill-card glass2 rev d1"><span class="sk-icon">⚛️</span><div class="sk-name">React.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="90%"></div></div><div class="sk-pct">90%</div></div>
+        <div class="skill-card glass2 rev d2"><span class="sk-icon">🟨</span><div class="sk-name">JavaScript</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="92%"></div></div><div class="sk-pct">92%</div></div>
+        <div class="skill-card glass2 rev d3"><span class="sk-icon">🔷</span><div class="sk-name">TypeScript</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="75%"></div></div><div class="sk-pct">75%</div></div>
+        <div class="skill-card glass2 rev d4"><span class="sk-icon">🎨</span><div class="sk-name">CSS/Tailwind</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="88%"></div></div><div class="sk-pct">88%</div></div>
+        <div class="skill-card glass2 rev d1"><span class="sk-icon">📐</span><div class="sk-name">HTML5</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="95%"></div></div><div class="sk-pct">95%</div></div>
+        <div class="skill-card glass2 rev d2"><span class="sk-icon">🔺</span><div class="sk-name">Next.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="72%"></div></div><div class="sk-pct">72%</div></div>
+        <div class="skill-card glass2 rev d3"><span class="sk-icon">🎭</span><div class="sk-name">Framer Motion</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="68%"></div></div><div class="sk-pct">68%</div></div>
+        <div class="skill-card glass2 rev d4"><span class="sk-icon">💅</span><div class="sk-name">Bootstrap</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="85%"></div></div><div class="sk-pct">85%</div></div>
+      </div>
+    </div>
+    <div class="skill-panel" id="tab-backend">
+      <div class="skills-grid">
+        <div class="skill-card glass2"><span class="sk-icon">🟩</span><div class="sk-name">Node.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="82%"></div></div><div class="sk-pct">82%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🚂</span><div class="sk-name">Express.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="85%"></div></div><div class="sk-pct">85%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🐍</span><div class="sk-name">Python</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">☕</span><div class="sk-name">Java</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="65%"></div></div><div class="sk-pct">65%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔌</span><div class="sk-name">REST APIs</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="88%"></div></div><div class="sk-pct">88%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔐</span><div class="sk-name">JWT / Auth</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="80%"></div></div><div class="sk-pct">80%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">⚡</span><div class="sk-name">GraphQL</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="55%"></div></div><div class="sk-pct">55%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🧩</span><div class="sk-name">PHP/Laravel</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="60%"></div></div><div class="sk-pct">60%</div></div>
+      </div>
+    </div>
+    <div class="skill-panel" id="tab-database">
+      <div class="skills-grid">
+        <div class="skill-card glass2"><span class="sk-icon">🍃</span><div class="sk-name">MongoDB</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="85%"></div></div><div class="sk-pct">85%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🐘</span><div class="sk-name">PostgreSQL</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="78%"></div></div><div class="sk-pct">78%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🐬</span><div class="sk-name">MySQL</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="82%"></div></div><div class="sk-pct">82%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔥</span><div class="sk-name">Firebase</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="75%"></div></div><div class="sk-pct">75%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">⚡</span><div class="sk-name">Supabase</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔴</span><div class="sk-name">Redis</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="55%"></div></div><div class="sk-pct">55%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">📊</span><div class="sk-name">SQLite</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🗄️</span><div class="sk-name">Prisma ORM</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="65%"></div></div><div class="sk-pct">65%</div></div>
+      </div>
+    </div>
+    <div class="skill-panel" id="tab-tools">
+      <div class="skills-grid">
+        <div class="skill-card glass2"><span class="sk-icon">🐙</span><div class="sk-name">Git / GitHub</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="90%"></div></div><div class="sk-pct">90%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🐳</span><div class="sk-name">Docker</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="65%"></div></div><div class="sk-pct">65%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">▲</span><div class="sk-name">Vercel</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="85%"></div></div><div class="sk-pct">85%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔧</span><div class="sk-name">VS Code</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="95%"></div></div><div class="sk-pct">95%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🎨</span><div class="sk-name">Figma</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="72%"></div></div><div class="sk-pct">72%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">⚙️</span><div class="sk-name">Linux / CLI</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="75%"></div></div><div class="sk-pct">75%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🧪</span><div class="sk-name">Postman</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="88%"></div></div><div class="sk-pct">88%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">☁️</span><div class="sk-name">AWS Basics</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="50%"></div></div><div class="sk-pct">50%</div></div>
+      </div>
+    </div>
+    <div class="skill-panel" id="tab-mobile">
+      <div class="skills-grid">
+        <div class="skill-card glass2"><span class="sk-icon">📱</span><div class="sk-name">React Native</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="78%"></div></div><div class="sk-pct">78%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔵</span><div class="sk-name">Flutter</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="55%"></div></div><div class="sk-pct">55%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🧰</span><div class="sk-name">Expo</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="75%"></div></div><div class="sk-pct">75%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔔</span><div class="sk-name">Push Notifs</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ SERVICES ════════════ -->
+<section id="services">
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto 64px" class="rev">
+      <span class="sec-label">Services</span>
+      <h2>What I <span class="gtext">Build for You</span></h2>
+      <p style="margin-top:14px">End-to-end development services tailored to your goals. From idea to deployment.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card glass2 srv-c1 rev d1"><div class="srv-icon si-fire">🌐</div><h3>Full-Stack Web Apps</h3><p>Complete web applications from database to pixel-perfect frontend. Fast, scalable, production-ready.</p><div class="srv-tags"><span class="srv-tag">React</span><span class="srv-tag">Node.js</span><span class="srv-tag">MongoDB</span></div><a href="#contact" class="btn btn-glass btn-sm">Get Started →</a></div>
+      <div class="srv-card glass2 srv-c2 rev d2"><div class="srv-icon si-cool">📱</div><h3>Mobile App Development</h3><p>Cross-platform iOS and Android apps built with React Native — native performance, one codebase.</p><div class="srv-tags"><span class="srv-tag">React Native</span><span class="srv-tag">Expo</span><span class="srv-tag">Firebase</span></div><a href="#contact" class="btn btn-glass btn-sm">Get Started →</a></div>
+      <div class="srv-card glass2 srv-c3 rev d3"><div class="srv-icon si-hot">🛒</div><h3>E-commerce Solutions</h3><p>Complete online stores with payment gateways, order tracking, and customer dashboards.</p><div class="srv-tags"><span class="srv-tag">Next.js</span><span class="srv-tag">Stripe</span><span class="srv-tag">PostgreSQL</span></div><a href="#contact" class="btn btn-glass btn-sm">Get Started →</a></div>
+      <div class="srv-card glass2 srv-c4 rev d1"><div class="srv-icon si-fire">🎨</div><h3>UI/UX Design</h3><p>Beautiful, intuitive interfaces designed in Figma and brought to life with smooth animations.</p><div class="srv-tags"><span class="srv-tag">Figma</span><span class="srv-tag">CSS Animations</span><span class="srv-tag">3D</span></div><a href="#contact" class="btn btn-glass btn-sm">Get Started →</a></div>
+      <div class="srv-card glass2 srv-c5 rev d2"><div class="srv-icon si-cool">🔌</div><h3>API Development</h3><p>Custom REST & GraphQL APIs, third-party integrations, and microservices architecture.</p><div class="srv-tags"><span class="srv-tag">REST API</span><span class="srv-tag">GraphQL</span><span class="srv-tag">Webhooks</span></div><a href="#contact" class="btn btn-glass btn-sm">Get Started →</a></div>
+      <div class="srv-card glass2 srv-c6 rev d3"><div class="srv-icon si-hot">🤖</div><h3>AI-Powered Features</h3><p>Integrate AI and ML into your apps — chatbots, recommendations, analytics, automation.</p><div class="srv-tags"><span class="srv-tag">OpenAI</span><span class="srv-tag">Python</span><span class="srv-tag">ML</span></div><a href="#contact" class="btn btn-glass btn-sm">Get Started →</a></div>
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ PROJECTS (LIVE FROM SUPABASE) ════════════ -->
+<section id="projects">
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:20px">
+      <div class="rev"><span class="sec-label">Portfolio</span><h2>My <span class="gtext">Projects</span></h2></div>
+      <a href="https://github.com/Rrajupawar" target="_blank" class="btn btn-outline rev d2">GitHub Profile →</a>
+    </div>
+    <div class="proj-grid" id="projGrid">
+      <!-- Loaded from Supabase -->
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ TESTIMONIALS ════════════ -->
+<section id="testimonials">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px" class="rev">
+      <span class="sec-label">Testimonials</span>
+      <h2>What People <span class="g2text">Say About Me</span></h2>
+    </div>
+  </div>
+  <div class="testi-track-wrap">
+    <div class="testi-track">
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Raju's final year project was outstanding. The architecture, code quality, and UI exceeded all expectations. A truly gifted developer."</p><div class="testi-author"><div class="testi-av ta1">👩‍🏫</div><div><div class="testi-name">Dr. Priya Sharma</div><div class="testi-role">MCA Department HOD</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Working with Raju on our college fest app was incredible. He built the entire React Native app in 2 weeks — 500+ students, zero issues."</p><div class="testi-author"><div class="testi-av ta2">👨‍💻</div><div><div class="testi-name">Arjun Patel</div><div class="testi-role">Team Lead, Tech Club</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Raju redesigned our website and the results were immediate — 3x more inquiries in the first month. He understands both design and business."</p><div class="testi-author"><div class="testi-av ta3">👨‍💼</div><div><div class="testi-name">Ramesh Gupta</div><div class="testi-role">Business Owner</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"I've collaborated with Raju on several hackathons. His problem-solving speed and ability to write clean code under pressure is unmatched."</p><div class="testi-author"><div class="testi-av ta4">👩‍💻</div><div><div class="testi-name">Sneha Verma</div><div class="testi-role">MCA Classmate</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Raju built my e-commerce site in record time. Payment integration worked flawlessly from day one and the admin panel is incredible."</p><div class="testi-author"><div class="testi-av ta5">🧑‍💼</div><div><div class="testi-name">Vikram Singh</div><div class="testi-role">Startup Founder</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Highly impressed by Raju's technical depth and ability to deliver on time. One of the most promising developers I've mentored."</p><div class="testi-author"><div class="testi-av ta1">👨‍🏫</div><div><div class="testi-name">Prof. Manoj Kumar</div><div class="testi-role">Senior Faculty, CS Dept</div></div></div></div>
+      <!-- Duplicates for seamless loop -->
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Raju's final year project was outstanding. The architecture, code quality, and UI exceeded all expectations. A truly gifted developer."</p><div class="testi-author"><div class="testi-av ta1">👩‍🏫</div><div><div class="testi-name">Dr. Priya Sharma</div><div class="testi-role">MCA Department HOD</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Working with Raju on our college fest app was incredible. He built the entire React Native app in 2 weeks — 500+ students, zero issues."</p><div class="testi-author"><div class="testi-av ta2">👨‍💻</div><div><div class="testi-name">Arjun Patel</div><div class="testi-role">Team Lead, Tech Club</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Raju redesigned our website and the results were immediate — 3x more inquiries in the first month."</p><div class="testi-author"><div class="testi-av ta3">👨‍💼</div><div><div class="testi-name">Ramesh Gupta</div><div class="testi-role">Business Owner</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"His problem-solving speed and ability to write clean code under pressure is unmatched in our batch."</p><div class="testi-author"><div class="testi-av ta4">👩‍💻</div><div><div class="testi-name">Sneha Verma</div><div class="testi-role">MCA Classmate</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"Raju built my e-commerce site in record time. Payment integration worked flawlessly from day one."</p><div class="testi-author"><div class="testi-av ta5">🧑‍💼</div><div><div class="testi-name">Vikram Singh</div><div class="testi-role">Startup Founder</div></div></div></div>
+      <div class="testi-card glass2"><div class="testi-stars">★★★★★</div><p class="testi-text">"One of the most promising developers I've mentored in years. Exceptional technical depth."</p><div class="testi-author"><div class="testi-av ta1">👨‍🏫</div><div><div class="testi-name">Prof. Manoj Kumar</div><div class="testi-role">Senior Faculty</div></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ BLOG (LIVE FROM SUPABASE) ════════════ -->
+<section id="blog">
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;flex-wrap:wrap;gap:20px">
+      <div class="rev"><span class="sec-label">Blog & Articles</span><h2>Thoughts &amp; <span class="g2text">Insights</span></h2></div>
+      <a href="#" class="btn btn-outline rev d2">View All Posts →</a>
+    </div>
+    <div class="blog-grid" id="blogGrid">
+      <!-- Loaded from Supabase -->
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ RESUME ════════════ -->
+<section id="resume">
+  <div class="wrap">
+    <div class="resume-inner">
+      <span class="sec-label rev">Resume / CV</span>
+      <h2 class="rev d1">Download My <span class="gtext">Complete Resume</span></h2>
+      <p class="rev d2" style="margin-top:14px;margin-bottom:28px">A detailed overview of my education, projects, technical skills, and achievements — ready for recruiters.</p>
+      <div class="dl-count rev d2" id="dlCount">📥 Loading download stats...</div>
+      <div class="resume-mock glass2 rev d2">
+        <div class="rm-name">RAJU</div>
+        <div class="rm-title">MCA Graduate · Full-Stack Developer</div>
+        <div class="rm-divider"></div>
+        <div style="margin-bottom:16px"><div class="rm-sec-title">Education</div><div style="font-size:0.85rem;color:var(--tx);font-weight:600">Master of Computer Applications (MCA)</div><div style="font-size:0.78rem;color:var(--mt);margin-top:2px">2022 – 2024 · 8.4 CGPA</div></div>
+        <div style="margin-bottom:16px"><div class="rm-sec-title">Core Skills</div><div class="rm-row"><span class="rm-chip">React</span><span class="rm-chip">Node.js</span><span class="rm-chip">React Native</span><span class="rm-chip">MongoDB</span><span class="rm-chip">MySQL</span><span class="rm-chip">Python</span><span class="rm-chip">Git</span><span class="rm-chip">REST APIs</span></div></div>
+        <div><div class="rm-sec-title">Notable Projects</div><div style="font-size:0.82rem;color:var(--mt)">Hospital MS · E-Commerce Platform · Chat App · Analytics Dashboard · AI Study Tool</div></div>
+      </div>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap" class="rev d3">
+        <a href="https://elkxnulzlmbzugxpfshr.supabase.co/storage/v1/object/public/resume/Tech_Fresher_Resume_Bordered.pdf" class="btn btn-glow" id="resumeDownloadBtn" onclick="trackResumeDownload(event)">↓ Download PDF Resume</a>
+        <a href="#contact" class="btn btn-outline">Contact Me Instead</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sec-divider"></div>
+
+<!-- ════════════ CONTACT ════════════ -->
+<section id="contact">
+  <div class="contact-glow"></div>
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 64px">
+      <span class="sec-label rev">Contact</span>
+      <h2 class="rev d1">Let's Build Something <span class="gtext">Amazing Together</span></h2>
+      <p class="rev d2" style="margin-top:14px">Whether it's a job opportunity, freelance project, or just a tech conversation — my inbox is always open.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="rev-l">
+        <div class="c-item"><div class="c-icon ci-fire">📧</div><div><div class="ci-label">Email</div><div class="ci-val" id="settingEmail"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0775666d7277667066756d36333447606a666e6b2964686a">[email&#160;protected]</a></div></div></div>
+        <div class="c-item"><div class="c-icon ci-cool">💬</div><div><div class="ci-label">WhatsApp</div><div class="ci-val">+91 9972989629</div></div></div>
+        <div class="c-item"><div class="c-icon ci-hot">🎓</div><div><div class="ci-label">Degree</div><div class="ci-val">MCA Graduate · Available Now</div></div></div>
+        <div class="c-item"><div class="c-icon ci-pk">📍</div><div><div class="ci-label">Location</div><div class="ci-val">India · Open to Remote/Relocate</div></div></div>
+        <div class="soc-row">
+          <a href="https://github.com/Rrajupawar" target="_blank" class="soc-btn sb-gh" id="settingGithub">🐙</a>
+          <a href="https://www.linkedin.com/in/Raju-lamani" target="_blank" class="soc-btn sb-li" id="settingLinkedin">💼</a>
+          <a href="https://twitter.com/" target="_blank" class="soc-btn sb-tw">𝕏</a>
+          <a href="https://wa.me/919972989629" target="_blank" class="soc-btn sb-wa" id="settingWa">💬</a>
+        </div>
+        <div class="avail-card glass2">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <div class="avail-dot"></div>
+            <span style="font-weight:700;color:var(--tx);font-size:0.9rem">Available for Opportunities</span>
+          </div>
+          <p style="font-size:0.82rem;margin:0">Actively looking for full-time roles, internships, and freelance projects in web & mobile development.</p>
+        </div>
+      </div>
+      <div class="rev-r">
+        <div class="contact-form glass2">
+          <div id="cfContent">
+            <div class="cf-title">Send Me a Message 🚀</div>
+            <div class="cf-sub">Fill out the form — I'll reply within 24 hours.</div>
+            <div class="cf-row">
+              <div class="cf-group"><label>Your Name *</label><input type="text" id="c-name" placeholder="Your full name"/></div>
+              <div class="cf-group"><label>Email Address *</label><input type="email" id="c-email" placeholder="your@email.com"/></div>
+            </div>
+            <div class="cf-group">
+              <label>Inquiry Type</label>
+              <select id="c-type">
+                <option value="">Select type</option>
+                <option value="Job Opportunity">Job Opportunity / Hiring</option>
+                <option value="Freelance Project">Freelance Project</option>
+                <option value="Internship">Internship</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="General Query">General Query</option>
+              </select>
+            </div>
+            <div class="cf-group"><label>Subject *</label><input type="text" id="c-subject" placeholder="e.g. Frontend Developer Vacancy"/></div>
+            <div class="cf-group"><label>Message *</label><textarea id="c-msg" placeholder="Tell me about the opportunity or project..."></textarea></div>
+            <button class="btn btn-glow cf-submit" id="cfBtn" onclick="sendMsg()">Send Message 🚀</button>
+          </div>
+          <div class="form-success-wrap" id="cfSuccess">
+            <div class="fsw-icon">🎉</div>
+            <div class="fsw-wrap">
+              <h3>Message Sent!</h3>
+              <p>Thanks! Raju will reply within 24 hours.</p>
+              <button class="btn btn-outline" onclick="resetForm()">Send Another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">RAJU<span style="color:var(--c4)">.</span></div>
+        <p class="footer-desc">MCA Graduate & Full-Stack Developer. Building modern digital products and always learning something new.</p>
+        <div class="soc-row">
+          <a href="https://github.com/Rrajupawar" class="soc-btn sb-gh">🐙</a>
+          <a href="https://www.linkedin.com/in/Raju-lamani" class="soc-btn sb-li">💼</a>
+          <a href="https://twitter.com/" class="soc-btn sb-tw">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Quick Links</div>
+        <ul>
+          <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <ul>
+          <li><a href="#services">Full-Stack Web Apps</a></li><li><a href="#services">Mobile Development</a></li>
+          <li><a href="#services">E-commerce</a></li><li><a href="#services">UI/UX Design</a></li>
+          <li><a href="#services">API Development</a></li><li><a href="#services">AI Integration</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Raju · Designed & Built with ❤️ and lots of ☕ · Powered by Supabase</div>
+      <a href="#" onclick="openAdminModal();return false" style="color:rgba(136,136,170,0.2);font-size:0.72rem;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--c1)'" onmouseout="this.style.color='rgba(136,136,170,0.2)'">⚙ Admin</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════ ADMIN LOGIN MODAL ════════════ -->
+<div class="modal-overlay" id="adminModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeAdminModal()">✕</button>
+    <h3 style="color:var(--tx);margin-bottom:6px;font-family:var(--fh);font-size:1.2rem;letter-spacing:0.06em">Admin Login</h3>
+    <p style="font-size:0.85rem;color:var(--mt);margin-bottom:24px">Access your portfolio dashboard.</p>
+    <div class="auth-err" id="authErr"></div>
+    <div class="cf-group"><label>Email</label><input type="email" class="d-input" id="adminEmail" placeholder="your@email.com"/></div>
+    <div class="cf-group"><label>Password</label><input type="password" class="d-input" id="adminPass" placeholder="••••••••"/></div>
+    <button class="btn btn-glow" style="width:100%;justify-content:center;margin-top:8px" onclick="doLogin()">Login to Dashboard →</button>
+  </div>
+</div>
+
+<!-- ════════════ ADMIN DASHBOARD ════════════ -->
+<div class="admin-dash" id="adminDash">
+  <div class="dash-nav">
+    <div class="dash-logo">RAJU<span style="color:var(--c4)">.</span> Admin</div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <span id="adminUserEmail" style="font-size:0.78rem;color:var(--mt)"></span>
+      <div id="newContactAlert" style="display:none;padding:6px 14px;border-radius:100px;background:rgba(255,75,175,0.1);border:1px solid rgba(255,75,175,0.3);color:var(--c6);font-size:0.75rem;font-weight:700">🔔 <span id="newContactCount">0</span> New</div>
+      <button class="btn btn-outline btn-sm" onclick="doLogout()">Logout</button>
+    </div>
+  </div>
+  <div class="dash-body">
+    <!-- Stats -->
+    <div class="dash-stats">
+      <div class="dash-stat glass2"><div class="dsn gtext" id="statProjects">—</div><div class="dsl">Projects</div></div>
+      <div class="dash-stat glass2"><div class="dsn" style="background:var(--gcool);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" id="statContacts">—</div><div class="dsl">Total Enquiries</div></div>
+      <div class="dash-stat glass2"><div class="dsn" style="background:var(--ghot);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" id="statBlogs">—</div><div class="dsl">Blog Posts</div></div>
+      <div class="dash-stat glass2"><div class="dsn" style="background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" id="statDownloads">—</div><div class="dsl">Resume Downloads</div></div>
+    </div>
+    <!-- Tabs -->
+    <div class="dash-tabs">
+      <button class="dash-tab active" onclick="dashTab('enquiries',this)">📬 Enquiries</button>
+      <button class="dash-tab" onclick="dashTab('projects',this)">🚀 Projects</button>
+      <button class="dash-tab" onclick="dashTab('blog',this)">📝 Blog</button>
+      <button class="dash-tab" onclick="dashTab('settings',this)">⚙️ Settings</button>
+    </div>
+
+    <!-- ENQUIRIES PANEL -->
+    <div class="dash-panel active" id="dpEnquiries">
+      <div class="d-panel glass2">
+        <h3>Contact Enquiries</h3>
+        <div class="table-wrap" id="enquiriesTable"><p style="color:var(--mt);font-size:0.875rem">Loading...</p></div>
+      </div>
+    </div>
+
+    <!-- PROJECTS PANEL -->
+    <div class="dash-panel" id="dpProjects">
+      <div class="dash-grid2">
+        <div class="d-panel glass2">
+          <h3>Add New Project</h3>
+          <div class="form-msg" id="projMsg"></div>
+          <input class="d-input" id="p-title" placeholder="Project Title *"/>
+          <textarea class="d-input d-textarea" id="p-desc" placeholder="Description *"></textarea>
+          <input class="d-input" id="p-img" placeholder="Image URL (optional)"/>
+          <input class="d-input" id="p-tech" placeholder="Tech Stack (comma separated) e.g. React, Node.js"/>
+          <div class="dash-row">
+            <input class="d-input" id="p-live" placeholder="Live URL"/>
+            <input class="d-input" id="p-github" placeholder="GitHub URL"/>
+          </div>
+          <select class="d-input" id="p-cat">
+            <option value="Full-Stack">Full-Stack</option>
+            <option value="Web App">Web App</option>
+            <option value="Mobile App">Mobile App</option>
+            <option value="Dashboard">Dashboard</option>
+            <option value="AI Project">AI Project</option>
+            <option value="E-commerce">E-commerce</option>
+          </select>
+          <label style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--mt);cursor:pointer;margin-bottom:14px">
+            <input type="checkbox" id="p-featured" style="width:16px;height:16px;accent-color:var(--c1)"/> Mark as Featured
+          </label>
+          <button class="btn btn-glow btn-sm" onclick="addProject()">Add Project →</button>
+        </div>
+        <div class="d-panel glass2">
+          <h3>Existing Projects</h3>
+          <div id="projectsList" style="max-height:500px;overflow-y:auto"><p style="color:var(--mt);font-size:0.875rem">Loading...</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG PANEL -->
+    <div class="dash-panel" id="dpBlog">
+      <div class="dash-grid2">
+        <div class="d-panel glass2">
+          <h3>Add Blog Post</h3>
+          <div class="form-msg" id="blogMsg"></div>
+          <input class="d-input" id="b-title" placeholder="Post Title *"/>
+          <input class="d-input" id="b-slug" placeholder="URL Slug (e.g. my-first-post) *"/>
+          <textarea class="d-input d-textarea" id="b-excerpt" placeholder="Short excerpt/summary *"></textarea>
+          <div class="dash-row">
+            <select class="d-input" id="b-cat">
+              <option value="React">React</option>
+              <option value="Architecture">Architecture</option>
+              <option value="AI / ML">AI / ML</option>
+              <option value="Node.js">Node.js</option>
+              <option value="Mobile">Mobile</option>
+              <option value="General">General</option>
+            </select>
+            <input class="d-input" id="b-emoji" placeholder="Cover Emoji e.g. ⚛️" style="flex:1"/>
+          </div>
+          <input class="d-input" id="b-readtime" type="number" placeholder="Read time (minutes)" value="5"/>
+          <label style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--mt);cursor:pointer;margin-bottom:14px">
+            <input type="checkbox" id="b-published" style="width:16px;height:16px;accent-color:var(--c1)"/> Publish immediately
+          </label>
+          <button class="btn btn-cool btn-sm" onclick="addBlogPost()">Publish Post →</button>
+        </div>
+        <div class="d-panel glass2">
+          <h3>Published Posts</h3>
+          <div id="blogList" style="max-height:500px;overflow-y:auto"><p style="color:var(--mt);font-size:0.875rem">Loading...</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS PANEL -->
+    <div class="dash-panel" id="dpSettings">
+      <div class="d-panel glass2" style="max-width:600px">
+        <h3>Portfolio Settings</h3>
+        <div class="form-msg" id="settingsMsg"></div>
+        <div class="cf-group"><label>Your Email</label><input class="d-input" id="s-email" placeholder="raju@example.com"/></div>
+        <div class="cf-group"><label>WhatsApp Number (with country code, no +)</label><input class="d-input" id="s-wa" placeholder="919999999999"/></div>
+        <div class="cf-group"><label>Resume PDF URL</label><input class="d-input" id="s-resume" placeholder="https://drive.google.com/..."/></div>
+        <div class="cf-group"><label>GitHub URL</label><input class="d-input" id="s-github" placeholder="https://github.com/raju"/></div>
+        <div class="cf-group"><label>LinkedIn URL</label><input class="d-input" id="s-linkedin" placeholder="https://linkedin.com/in/raju"/></div>
+        <button class="btn btn-glow btn-sm" onclick="saveSettings()">Save Settings →</button>
+      </div>
+    </div>
+
+  </div><!-- /dash-body -->
+</div><!-- /admin-dash -->
+
+<!-- ══════════════════════════════════════
+     SUPABASE SDK
+══════════════════════════════════════ -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+<script>
+// ══════════════════════════════════════════════
+// ⚡ SUPABASE CONFIG — YOUR CREDENTIALS
+// ══════════════════════════════════════════════
+const SUPA_URL  = 'https://elkxnulzlmbzugxpfshr.supabase.co';
+const SUPA_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVsa3hudWx6bG1ienVneHBmc2hyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI4MTU4MDIsImV4cCI6MjA4ODM5MTgwMn0.In_m4S4XxYGrqww57LYeZM_lgr-68-m1K7OM9WtwvK0';
+
+const sb = supabase.createClient(SUPA_URL, SUPA_ANON);
+
+// ══════════════════════════════════════════════
+// TOAST SYSTEM
+// ══════════════════════════════════════════════
+function toast(msg, type='info', dur=3500) {
+  const t = document.getElementById('toast');
+  t.className = `toast toast-${type} show`;
+  t.textContent = msg;
+  setTimeout(() => t.classList.remove('show'), dur);
+}
+
+// ══════════════════════════════════════════════
+// CURSOR
+// ══════════════════════════════════════════════
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function ac(){rx+=(mx-rx)*0.14;ry+=(my-ry)*0.14;cur.style.cssText=`left:${mx}px;top:${my}px`;cur2.style.cssText=`left:${rx}px;top:${ry}px`;requestAnimationFrame(ac)})();
+document.querySelectorAll('a,button,.skill-card,.srv-card,.proj-card,.blog-card,.testi-card,.soc-btn,.info-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+});
+
+// ══════════════════════════════════════════════
+// PARTICLES
+// ══════════════════════════════════════════════
+const pc=document.getElementById('particles');
+const PC=['rgba(255,107,53,0.4)','rgba(0,212,255,0.4)','rgba(180,75,255,0.4)','rgba(255,75,175,0.4)','rgba(255,205,60,0.3)'];
+for(let i=0;i<40;i++){const p=document.createElement('div');p.className='particle';const s=Math.random()*3+1,x=Math.random()*100,d=Math.random()*20+15,dl=Math.random()*20;p.style.cssText=`width:${s}px;height:${s}px;left:${x}%;bottom:-10px;background:${PC[Math.floor(Math.random()*5)]};animation-duration:${d}s;animation-delay:-${dl}s;animation-name:pdrift`;pc.appendChild(p)}
+
+// ══════════════════════════════════════════════
+// NAV
+// ══════════════════════════════════════════════
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  n.classList.toggle('solid',window.scrollY>60);
+  document.getElementById('navResBtn').style.display=window.scrollY>60?'inline-flex':'none';
+});
+function openMob(){document.getElementById('mobNav').classList.add('open')}
+function closeMob(){document.getElementById('mobNav').classList.remove('open')}
+
+// ══════════════════════════════════════════════
+// TYPING EFFECT
+// ══════════════════════════════════════════════
+const roles=['Full-Stack Developer','MCA Graduate','React Developer','Mobile App Builder','UI/UX Enthusiast','Problem Solver 💡'];
+let ri=0,ci=0,del=false;
+const tEl=document.getElementById('typeTarget');
+function typeLoop(){
+  const w=roles[ri];
+  if(!del){tEl.textContent=w.slice(0,++ci);if(ci===w.length){del=true;setTimeout(typeLoop,1600);return}}
+  else{tEl.textContent=w.slice(0,--ci);if(ci===0){del=false;ri=(ri+1)%roles.length}}
+  setTimeout(typeLoop,del?60:100);
+}
+typeLoop();
+
+// ══════════════════════════════════════════════
+// SCROLL REVEAL
+// ══════════════════════════════════════════════
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');ro.unobserve(x.target)}})},{threshold:0.1});
+document.querySelectorAll('.rev,.rev-l,.rev-r,.rev-s').forEach(el=>ro.observe(el));
+
+// ══════════════════════════════════════════════
+// SKILL TABS + BAR ANIMATION
+// ══════════════════════════════════════════════
+const barObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.querySelectorAll('.sk-fill').forEach(f=>{f.style.width=f.dataset.w})})},{threshold:0.3});
+document.querySelectorAll('.skill-panel').forEach(p=>barObs.observe(p));
+
+function switchTab(id,btn){
+  document.querySelectorAll('.skill-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.s-tab').forEach(b=>b.classList.remove('active'));
+  const panel=document.getElementById('tab-'+id);
+  panel.classList.add('active');btn.classList.add('active');
+  setTimeout(()=>{
+    panel.querySelectorAll('.sk-fill').forEach(f=>{f.style.width='0%';setTimeout(()=>{f.style.width=f.dataset.w},60)});
+    panel.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>{el.classList.remove('show');setTimeout(()=>el.classList.add('show'),100)});
+  },50);
+}
+
+// ══════════════════════════════════════════════
+// PROJECTS — LOAD FROM SUPABASE
+// ══════════════════════════════════════════════
+const PROJ_COLORS=['pt-1','pt-2','pt-3','pt-4','pt-5','pt-6'];
+const PROJ_EMOJIS={'Full-Stack':'🌐','Web App':'💻','Mobile App':'📱','Dashboard':'📊','AI Project':'🤖','E-commerce':'🛒'};
+
+function renderProjects(projects) {
+  const g = document.getElementById('projGrid');
+  if (!projects || !projects.length) {
+    g.innerHTML = `<div class="proj-empty"><div style="font-size:3rem;opacity:0.4;margin-bottom:12px">🗂️</div><p>No projects yet. Add them from the admin dashboard.</p></div>`;
+    return;
+  }
+  g.innerHTML = projects.map((p,i) => `
+    <div class="proj-card glass2 rev" style="transition-delay:${(i%3)*0.1}s">
+      <div class="proj-thumb ${PROJ_COLORS[i%6]}">
+        ${p.image_url ? `<img src="${p.image_url}" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>` : `<span style="font-size:3.5rem">${PROJ_EMOJIS[p.category]||'💻'}</span>`}
+        ${p.category?`<div class="proj-tag">${p.category}</div>`:''}
+        <div class="proj-overlay">
+          ${p.live_url?`<a href="${p.live_url}" target="_blank" class="btn btn-glow btn-sm">Live Demo ↗</a>`:''}
+          ${p.github_url?`<a href="${p.github_url}" target="_blank" class="btn btn-glass btn-sm">GitHub</a>`:''}
+          ${!p.live_url&&!p.github_url?`<span style="font-size:0.8rem;color:var(--mt)">Private Project</span>`:''}
+        </div>
+      </div>
+      <div class="proj-body">
+        <h3>${p.title}</h3>
+        <p>${p.description}</p>
+        <div class="proj-tech">${(p.tech_stack||[]).map(t=>`<span class="pt-tag">${t}</span>`).join('')}</div>
+        <div class="proj-links">
+          ${p.live_url?`<a href="${p.live_url}" target="_blank" class="btn btn-glow btn-sm">Live ↗</a>`:''}
+          ${p.github_url?`<a href="${p.github_url}" target="_blank" class="btn btn-glass btn-sm">GitHub</a>`:''}
+          ${!p.live_url&&!p.github_url?`<span style="font-size:0.78rem;color:var(--mt)">Private project</span>`:''}
+        </div>
+      </div>
+    </div>`).join('');
+  document.querySelectorAll('#projGrid .rev').forEach(el=>ro.observe(el));
+}
+
+function showProjSkeletons() {
+  const g = document.getElementById('projGrid');
+  g.innerHTML = [1,2,3].map(()=>`
+    <div class="proj-skeleton glass2">
+      <div style="aspect-ratio:16/9"><div class="skel" style="height:100%"></div></div>
+      <div style="padding:22px 24px">
+        <div class="skel" style="height:20px;width:60%;margin-bottom:10px"></div>
+        <div class="skel" style="height:14px;margin-bottom:6px"></div>
+        <div class="skel" style="height:14px;width:75%;margin-bottom:20px"></div>
+        <div class="skel" style="height:30px;width:40%"></div>
+      </div>
+    </div>`).join('');
+}
+
+async function loadProjects() {
+  showProjSkeletons();
+  const {data,error} = await sb.from('projects').select('*').order('featured',{ascending:false}).order('sort_order',{ascending:true});
+  renderProjects(!error && data ? data : []);
+}
+
+// ══════════════════════════════════════════════
+// BLOG — LOAD FROM SUPABASE
+// ══════════════════════════════════════════════
+const BLOG_COLORS=['bt-1','bt-2','bt-3'];
+const BLOG_BC=['bc-fire','bc-cool','bc-hot'];
+
+function renderBlog(posts) {
+  const g = document.getElementById('blogGrid');
+  if (!posts || !posts.length) {
+    g.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--mt)"><p>No blog posts yet.</p></div>`;
+    return;
+  }
+  g.innerHTML = posts.map((p,i) => `
+    <div class="blog-card glass2 rev" style="transition-delay:${(i%3)*0.1}s">
+      <div class="blog-thumb ${BLOG_COLORS[i%3]}">
+        <span style="font-size:3rem">${p.cover_emoji||'📝'}</span>
+        <div class="blog-cat ${BLOG_BC[i%3]}">${p.category}</div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-date">${new Date(p.created_at).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}</span>
+          <span class="blog-read">⏱ ${p.read_time} min read</span>
+          <span class="blog-views" style="margin-left:auto">👁 ${p.views||0}</span>
+        </div>
+        <h3>${p.title}</h3>
+        <p>${p.excerpt}</p>
+        <a href="#" class="blog-link" onclick="incrementViews('${p.id}');return false">Read Article →</a>
+      </div>
+    </div>`).join('');
+  document.querySelectorAll('#blogGrid .rev').forEach(el=>ro.observe(el));
+}
+
+async function loadBlog() {
+  const {data,error} = await sb.from('blog_posts').select('*').eq('published',true).order('created_at',{ascending:false}).limit(3);
+  renderBlog(!error && data ? data : []);
+}
+
+async function incrementViews(id) {
+  await sb.rpc('increment_blog_views', {post_id: id}).catch(()=>{});
+}
+
+// ══════════════════════════════════════════════
+// RESUME DOWNLOAD TRACKING
+// ══════════════════════════════════════════════
+async function loadDownloadCount() {
+  const {count} = await sb.from('resume_downloads').select('*',{count:'exact',head:true});
+  const el = document.getElementById('dlCount');
+  if(el) el.innerHTML = `📥 <strong style="color:var(--c4)">${count||0}</strong> developers have downloaded my resume`;
+}
+
+async function trackResumeDownload(e) {
+  e.preventDefault();
+  // Track download (don't block on this)
+  sb.from('resume_downloads').insert([{visitor_info: navigator.userAgent.substring(0,200)}]).catch(()=>{});
+  // 1st: try settings table for resume_url
+  let url = null;
+  try {
+    const {data} = await sb.from('settings').select('value').eq('key','resume_url').single();
+    if (data?.value && data.value.trim() !== '' && data.value !== 'https://your-resume-link.pdf') {
+      url = data.value;
+    }
+  } catch(err) {}
+  // 2nd: fallback to button href
+  if (!url) url = document.getElementById('resumeDownloadBtn').getAttribute('href');
+  // Open the URL
+  if (url && url !== '#') {
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.download = '';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    toast('📥 Resume downloading...', 'ok');
+  } else {
+    toast('⚠️ Resume not found. Please contact me directly.', 'err', 4000);
+  }
+  loadDownloadCount();
+}
+
+// ══════════════════════════════════════════════
+// SETTINGS — LOAD FROM SUPABASE
+// ══════════════════════════════════════════════
+async function loadPublicSettings() {
+  const {data} = await sb.from('settings').select('key,value');
+  if(!data) return;
+  const s = {};
+  data.forEach(r=>s[r.key]=r.value);
+  if(s.email) document.getElementById('settingEmail').textContent = s.email;
+  if(s.whatsapp_number) {
+    const wn = s.whatsapp_number;
+    document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.href=`https://wa.me/${wn}`);
+  }
+  if(s.github_url) {
+    document.getElementById('settingGithub').href = s.github_url;
+    document.querySelectorAll('a.soc-btn.sb-gh').forEach(a=>a.href=s.github_url);
+  }
+  if(s.linkedin_url) {
+    document.getElementById('settingLinkedin').href = s.linkedin_url;
+    document.querySelectorAll('a.soc-btn.sb-li').forEach(a=>a.href=s.linkedin_url);
+  }
+  // Update resume button dynamically from settings
+  if(s.resume_url && s.resume_url !== 'https://your-resume-link.pdf') {
+    document.getElementById('resumeDownloadBtn').setAttribute('data-fallback', s.resume_url);
+  }
+}
+
+// ══════════════════════════════════════════════
+// REALTIME — Live contact notifications
+// ══════════════════════════════════════════════
+let newContacts = 0;
+
+sb.channel('realtime-contacts')
+  .on('postgres_changes',{event:'INSERT',schema:'public',table:'contacts'}, payload => {
+    newContacts++;
+    toast(`📬 New enquiry from ${payload.new.name}!`, 'info', 5000);
+    // If admin is logged in, update notification badge and reload table
+    if(document.getElementById('adminDash').classList.contains('open')) {
+      loadEnquiries();
+      loadDashStats();
+    } else {
+      // Show notification in navbar
+      document.getElementById('navNotify').style.display='block';
+      document.getElementById('notifyCount').textContent = newContacts;
+      document.getElementById('newContactAlert').style.display='block';
+      document.getElementById('newContactCount').textContent = newContacts;
+    }
+  })
+  .subscribe();
+
+sb.channel('realtime-projects')
+  .on('postgres_changes',{event:'INSERT',schema:'public',table:'projects'}, ()=>loadProjects())
+  .on('postgres_changes',{event:'UPDATE',schema:'public',table:'projects'}, ()=>loadProjects())
+  .on('postgres_changes',{event:'DELETE',schema:'public',table:'projects'}, ()=>loadProjects())
+  .subscribe();
+
+// ══════════════════════════════════════════════
+// CONTACT FORM
+// ══════════════════════════════════════════════
+async function sendMsg() {
+  const name    = document.getElementById('c-name').value.trim();
+  const email   = document.getElementById('c-email').value.trim();
+  const subject = document.getElementById('c-subject').value.trim();
+  const msg     = document.getElementById('c-msg').value.trim();
+  const type    = document.getElementById('c-type').value;
+
+  let valid = true;
+  [['c-name',name],['c-email',email],['c-subject',subject],['c-msg',msg]].forEach(([id,val])=>{
+    const el=document.getElementById(id);
+    if(!val || (id==='c-email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val))){
+      el.classList.add('field-error');valid=false;
+      el.addEventListener('input',()=>el.classList.remove('field-error'),{once:true});
+    }
+  });
+  if(!valid){toast('⚠️ Please fill all required fields correctly','err');return}
+
+  const btn=document.getElementById('cfBtn');
+  btn.textContent='Sending...';btn.disabled=true;
+
+  const {error} = await sb.from('contacts').insert([{name,email,inquiry_type:type,subject,message:msg,status:'new'}]);
+
+  if(!error){
+    document.getElementById('cfContent').style.display='none';
+    document.getElementById('cfSuccess').classList.add('show');
+    toast('🎉 Message sent successfully!','ok');
+  } else {
+    btn.textContent='Send Message 🚀';btn.disabled=false;
+    toast('❌ Error: '+error.message,'err');
+  }
+}
+
+function resetForm(){
+  document.getElementById('cfContent').style.display='block';
+  document.getElementById('cfSuccess').classList.remove('show');
+  ['c-name','c-email','c-type','c-subject','c-msg'].forEach(id=>{const e=document.getElementById(id);if(e)e.value=''});
+  const btn=document.getElementById('cfBtn');
+  if(btn){btn.textContent='Send Message 🚀';btn.disabled=false}
+}
+
+// ══════════════════════════════════════════════
+// ADMIN AUTH
+// ══════════════════════════════════════════════
+function openAdminModal(){document.getElementById('adminModal').classList.add('open')}
+function closeAdminModal(){document.getElementById('adminModal').classList.remove('open')}
+document.getElementById('adminModal').addEventListener('click',e=>{if(e.target===document.getElementById('adminModal'))closeAdminModal()});
+
+async function doLogin(){
+  const email=document.getElementById('adminEmail').value;
+  const pass=document.getElementById('adminPass').value;
+  const errEl=document.getElementById('authErr');
+  errEl.style.display='none';
+  const {data,error}=await sb.auth.signInWithPassword({email,password:pass});
+  if(error){errEl.style.display='block';errEl.textContent=error.message;return}
+  closeAdminModal();
+  openAdminDash(data.user.email);
+  toast('✅ Welcome back, Admin!','ok');
+}
+
+async function doLogout(){
+  await sb.auth.signOut();
+  document.getElementById('adminDash').classList.remove('open');
+  document.getElementById('navNotify').style.display='none';
+  toast('👋 Logged out','info');
+}
+
+function openAdminDash(email){
+  document.getElementById('adminDash').classList.add('open');
+  document.getElementById('adminUserEmail').textContent=email;
+  document.getElementById('navNotify').style.display='none';
+  newContacts=0;
+  loadDashStats();
+  loadEnquiries();
+  loadAdminProjects();
+  loadAdminBlog();
+  loadAdminSettings();
+}
+
+// Check existing session on load
+sb.auth.getSession().then(({data})=>{
+  if(data?.session) openAdminDash(data.session.user.email);
+});
+
+// ══════════════════════════════════════════════
+// ADMIN DASHBOARD — STATS
+// ══════════════════════════════════════════════
+async function loadDashStats(){
+  const [pRes,cRes,bRes,dRes]=await Promise.all([
+    sb.from('projects').select('*',{count:'exact',head:true}),
+    sb.from('contacts').select('*',{count:'exact',head:true}),
+    sb.from('blog_posts').select('*',{count:'exact',head:true}),
+    sb.from('resume_downloads').select('*',{count:'exact',head:true})
+  ]);
+  document.getElementById('statProjects').textContent  = pRes.count ?? '—';
+  document.getElementById('statContacts').textContent  = cRes.count ?? '—';
+  document.getElementById('statBlogs').textContent     = bRes.count ?? '—';
+  document.getElementById('statDownloads').textContent = dRes.count ?? '—';
+
+  // Check new contacts
+  const {count} = await sb.from('contacts').select('*',{count:'exact',head:true}).eq('status','new');
+  if(count > 0){
+    document.getElementById('newContactAlert').style.display='block';
+    document.getElementById('newContactCount').textContent=count;
+  }
+}
+
+// ══════════════════════════════════════════════
+// ADMIN — ENQUIRIES TABLE
+// ══════════════════════════════════════════════
+async function loadEnquiries(){
+  const el=document.getElementById('enquiriesTable');
+  const {data,error}=await sb.from('contacts').select('*').order('created_at',{ascending:false}).limit(50);
+  if(error||!data||!data.length){el.innerHTML='<p style="color:var(--mt);font-size:0.875rem">No enquiries yet.</p>';return}
+  el.innerHTML=`<table>
+    <thead><tr><th>Name</th><th>Email</th><th>Type</th><th>Subject</th><th>Status</th><th>Date</th><th>Action</th></tr></thead>
+    <tbody>${data.map(c=>`
+      <tr>
+        <td style="font-weight:700">${c.name}</td>
+        <td><a href="mailto:${c.email}" style="color:var(--c4);text-decoration:none">${c.email}</a></td>
+        <td style="color:var(--mt);font-size:0.78rem">${c.inquiry_type||'—'}</td>
+        <td style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${c.subject||'—'}</td>
+        <td><span class="status-badge s-${c.status}">${c.status}</span></td>
+        <td style="color:var(--mt);font-size:0.75rem;white-space:nowrap">${new Date(c.created_at).toLocaleDateString('en-GB',{day:'numeric',month:'short'})}</td>
+        <td style="display:flex;gap:6px">
+          <button class="btn btn-success btn-sm" style="padding:5px 10px;font-size:0.72rem" onclick="markContact('${c.id}','replied')">✓ Reply</button>
+          <button class="btn btn-glass btn-sm" style="padding:5px 10px;font-size:0.72rem" onclick="markContact('${c.id}','read')">Read</button>
+        </td>
+      </tr>
+      <tr><td colspan="7" style="padding:0 12px 12px;color:var(--mt);font-size:0.8rem;border-bottom:1px solid var(--bd)">${c.message}</td></tr>`).join('')}
+    </tbody>
+  </table>`;
+}
+
+async function markContact(id, status) {
+  await sb.from('contacts').update({status}).eq('id',id);
+  toast(`✅ Marked as ${status}`,'ok');
+  loadEnquiries();
+  loadDashStats();
+}
+
+// ══════════════════════════════════════════════
+// ADMIN — PROJECTS
+// ══════════════════════════════════════════════
+async function addProject(){
+  const msg=document.getElementById('projMsg');
+  const title=document.getElementById('p-title').value.trim();
+  const desc=document.getElementById('p-desc').value.trim();
+  msg.className='form-msg';
+  if(!title||!desc){msg.textContent='Title and description are required.';msg.classList.add('msg-err');return}
+  const tech=document.getElementById('p-tech').value.split(',').map(t=>t.trim()).filter(Boolean);
+  const {error}=await sb.from('projects').insert([{
+    title,description:desc,
+    image_url:document.getElementById('p-img').value.trim()||null,
+    tech_stack:tech,
+    live_url:document.getElementById('p-live').value.trim()||null,
+    github_url:document.getElementById('p-github').value.trim()||null,
+    category:document.getElementById('p-cat').value,
+    featured:document.getElementById('p-featured').checked
+  }]);
+  if(!error){
+    msg.textContent='✓ Project added!';msg.classList.add('msg-ok');
+    ['p-title','p-desc','p-img','p-tech','p-live','p-github'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('p-featured').checked=false;
+    loadAdminProjects();loadDashStats();toast('🚀 Project added!','ok');
+  } else {
+    msg.textContent=error.message;msg.classList.add('msg-err');
+  }
+}
+
+async function loadAdminProjects(){
+  const el=document.getElementById('projectsList');
+  const {data}=await sb.from('projects').select('*').order('created_at',{ascending:false});
+  if(!data||!data.length){el.innerHTML='<p style="color:var(--mt);font-size:0.875rem">No projects yet.</p>';return}
+  el.innerHTML=data.map(p=>`
+    <div style="border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px">
+        <div>
+          <div style="font-weight:700;font-size:0.88rem;color:var(--tx)">${p.title}${p.featured?'<span style="margin-left:6px;font-size:0.65rem;padding:2px 7px;background:rgba(255,205,60,0.15);border:1px solid rgba(255,205,60,0.3);color:var(--c3);border-radius:100px">★ Featured</span>':''}</div>
+          <div style="font-size:0.72rem;color:var(--c1);margin-top:2px">${p.category}</div>
+        </div>
+        <button class="btn btn-danger btn-sm" style="padding:5px 10px;font-size:0.7rem;flex-shrink:0" onclick="deleteProject('${p.id}','${p.title.replace(/'/g,"\\'")}')">Delete</button>
+      </div>
+      <div style="font-size:0.78rem;color:var(--mt);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${p.description}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px">${(p.tech_stack||[]).map(t=>`<span style="padding:2px 8px;background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.15);border-radius:100px;font-size:0.65rem;color:var(--c1)">${t}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+async function deleteProject(id, title){
+  if(!confirm(`Delete "${title}"?`)) return;
+  const {error}=await sb.from('projects').delete().eq('id',id);
+  if(!error){toast('🗑️ Project deleted','info');loadAdminProjects();loadDashStats();}
+  else toast('❌ Error: '+error.message,'err');
+}
+
+// ══════════════════════════════════════════════
+// ADMIN — BLOG
+// ══════════════════════════════════════════════
+async function addBlogPost(){
+  const msg=document.getElementById('blogMsg');
+  const title=document.getElementById('b-title').value.trim();
+  const slug=document.getElementById('b-slug').value.trim().toLowerCase().replace(/\s+/g,'-');
+  const excerpt=document.getElementById('b-excerpt').value.trim();
+  msg.className='form-msg';
+  if(!title||!slug||!excerpt){msg.textContent='Title, slug, and excerpt are required.';msg.classList.add('msg-err');return}
+  const {error}=await sb.from('blog_posts').insert([{
+    title,slug,excerpt,
+    category:document.getElementById('b-cat').value,
+    cover_emoji:document.getElementById('b-emoji').value||'📝',
+    read_time:parseInt(document.getElementById('b-readtime').value)||5,
+    published:document.getElementById('b-published').checked
+  }]);
+  if(!error){
+    msg.textContent='✓ Blog post added!';msg.classList.add('msg-ok');
+    ['b-title','b-slug','b-excerpt','b-emoji'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('b-published').checked=false;
+    loadAdminBlog();loadBlog();loadDashStats();toast('📝 Blog post added!','ok');
+  } else {
+    msg.textContent=error.message;msg.classList.add('msg-err');
+  }
+}
+
+async function loadAdminBlog(){
+  const el=document.getElementById('blogList');
+  const {data}=await sb.from('blog_posts').select('*').order('created_at',{ascending:false});
+  if(!data||!data.length){el.innerHTML='<p style="color:var(--mt);font-size:0.875rem">No posts yet.</p>';return}
+  el.innerHTML=data.map(p=>`
+    <div style="border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px">
+        <div style="font-weight:700;font-size:0.88rem;color:var(--tx)">${p.cover_emoji} ${p.title}</div>
+        <div style="display:flex;gap:6px">
+          <button class="btn btn-sm" style="padding:4px 10px;font-size:0.7rem;background:rgba(22,163,74,${p.published?'0.2':'0.08'});color:${p.published?'#4ade80':'var(--mt)'};border:1px solid rgba(22,163,74,0.2)" onclick="togglePublish('${p.id}',${!p.published})">${p.published?'✓ Live':'Publish'}</button>
+          <button class="btn btn-danger btn-sm" style="padding:4px 10px;font-size:0.7rem" onclick="deleteBlog('${p.id}')">Delete</button>
+        </div>
+      </div>
+      <div style="font-size:0.72rem;color:var(--c1);margin-bottom:4px">${p.category} · ${p.read_time} min · 👁 ${p.views||0}</div>
+      <div style="font-size:0.78rem;color:var(--mt)">${p.excerpt?.substring(0,100)}${p.excerpt?.length>100?'...':''}</div>
+    </div>`).join('');
+}
+
+async function togglePublish(id,pub){
+  await sb.from('blog_posts').update({published:pub}).eq('id',id);
+  toast(pub?'✅ Post published!':'📦 Post unpublished','ok');
+  loadAdminBlog();loadBlog();
+}
+
+async function deleteBlog(id){
+  if(!confirm('Delete this post?'))return;
+  await sb.from('blog_posts').delete().eq('id',id);
+  toast('🗑️ Post deleted','info');loadAdminBlog();loadDashStats();loadBlog();
+}
+
+// ══════════════════════════════════════════════
+// ADMIN — SETTINGS
+// ══════════════════════════════════════════════
+async function loadAdminSettings(){
+  const {data}=await sb.from('settings').select('key,value');
+  if(!data)return;
+  const s={};data.forEach(r=>s[r.key]=r.value);
+  document.getElementById('s-email').value    = s.email||'';
+  document.getElementById('s-wa').value       = s.whatsapp_number||'';
+  document.getElementById('s-resume').value   = s.resume_url||'';
+  document.getElementById('s-github').value   = s.github_url||'';
+  document.getElementById('s-linkedin').value = s.linkedin_url||'';
+}
+
+async function saveSettings(){
+  const msg=document.getElementById('settingsMsg');
+  msg.className='form-msg';
+  const pairs=[
+    ['email',document.getElementById('s-email').value.trim()],
+    ['whatsapp_number',document.getElementById('s-wa').value.trim()],
+    ['resume_url',document.getElementById('s-resume').value.trim()],
+    ['github_url',document.getElementById('s-github').value.trim()],
+    ['linkedin_url',document.getElementById('s-linkedin').value.trim()]
+  ];
+  const {error}=await sb.from('settings').upsert(pairs.map(([key,value])=>({key,value})),{onConflict:'key'});
+  if(!error){
+    msg.textContent='✓ Settings saved!';msg.classList.add('msg-ok');
+    toast('⚙️ Settings updated!','ok');
+    loadPublicSettings();
+  } else {
+    msg.textContent=error.message;msg.classList.add('msg-err');
+  }
+}
+
+// ══════════════════════════════════════════════
+// ADMIN DASH TABS
+// ══════════════════════════════════════════════
+function dashTab(id,btn){
+  document.querySelectorAll('.dash-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.dash-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('dp'+id.charAt(0).toUpperCase()+id.slice(1)).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ══════════════════════════════════════════════
+// INIT — Run everything on load
+// ══════════════════════════════════════════════
+loadProjects();
+loadBlog();
+loadDownloadCount();
+loadPublicSettings();
+</script>
+</body>
+</html>
