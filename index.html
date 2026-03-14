@@ -143,12 +143,6 @@ p{color:var(--mt);line-height:1.8}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .about-card-3d{width:100%;aspect-ratio:3/4;max-height:460px;border-radius:24px;background:linear-gradient(145deg,rgba(255,107,53,0.1),rgba(0,212,255,0.08));border:1px solid rgba(255,107,53,0.2);display:flex;align-items:center;justify-content:center;font-size:100px;position:relative;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.5);transform:perspective(600px) rotateY(-10deg);transition:transform 0.5s ease}
 .about-card-3d:hover{transform:perspective(600px) rotateY(0deg)}
-.about-card-3d img {
-    width: 50%; /* Makes the image take the full width of its parent div */
-    height: 70%; /* Makes the image take the full height of its parent div */
-    object-fit: cover; /* Ensures the image covers the entire area without being stretched, cropping as necessary */
-}
-
 .about-card-3d::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 40% 40%,rgba(255,107,53,0.12),transparent 60%)}
 .about-card-3d::after{content:'RAJU';position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:var(--fh);font-size:1.6rem;font-weight:900;letter-spacing:0.2em;background:var(--gfire);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .about-float-badge{position:absolute;bottom:-24px;right:-24px;padding:20px 24px;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
@@ -415,7 +409,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
 <div id="cur"></div><div id="cur2"></div>
 
 <!-- WhatsApp -->
-<a href="https://wa.me/9972989629" class="wa-btn" target="_blank" id="waBtn">
+<a href="https://wa.me/919972989629" class="wa-btn" target="_blank" id="waBtn">
   <span class="wa-tip">Let's chat! 💬</span>💬
 </a>
 
@@ -425,7 +419,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
 <!-- ════════════ NAVBAR ════════════ -->
 <nav id="nav">
   <div class="nav-in">
-    <a href="#home" class="nav-logo">RAJU<span style="color:var(--c4)"></span></a>
+    <a href="#home" class="nav-logo">RAJU<span style="color:var(--c4)"> PAWAR</span></a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -502,7 +496,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
     <div class="about-grid">
       <div class="rev-l">
         <div style="position:relative">
-          <div class="about-card-3d"><img src="C:\Users\Lenovo\Downloads\image.jpeg" alt="Description of image"></div>
+          <div class="about-card-3d"><img src="image.jpeg" alt="Raju"></div>
           <div class="about-float-badge glass2"><div class="afbv">MCA</div><div class="afbl">Graduate 2026</div></div>
         </div>
       </div>
@@ -517,8 +511,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
           <div class="info-item glass2"><div class="ikey">Specialisation</div><div class="ival">Full-Stack Dev</div></div>
           <div class="info-item glass2"><div class="ikey">Location</div><div class="ival">India 🇮🇳</div></div>
           <div class="info-item glass2"><div class="ikey">Status</div><div class="ival" style="color:#00ff88">Open to Work ✓</div></div>
-          <div class="info-item glass2"><div class="ikey">Languages</div><div class="ival">Kannada, English, Hindi</div></div>
-          <div class="info-item glass2"><div class="ikey">Interests</div><div class="ival">Software dev, Open Source, IT</div></div>
+          <div class="info-item glass2"><div class="ikey">Languages</div><div class="ival">English, Hindi</div></div>
+          <div class="info-item glass2"><div class="ikey">Interests</div><div class="ival">AI/ML, Open Source</div></div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a href="#contact" class="btn btn-glow">Let's Connect →</a>
@@ -547,21 +541,23 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
     </div>
     <div class="skill-panel active" id="tab-frontend">
       <div class="skills-grid">
-        <div class="skill-card glass2 rev d1"><span class="sk-icon">⚛️</span><div class="sk-name">React.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
-        <div class="skill-card glass2 rev d2"><span class="sk-icon">🟨</span><div class="sk-name">JavaScript</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="72%"></div></div><div class="sk-pct">72%</div></div>
-        <div class="skill-card glass2 rev d3"><span class="sk-icon">🔷</span><div class="sk-name">TypeScript</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="55%"></div></div><div class="sk-pct">55%</div></div>
-        <div class="skill-card glass2 rev d4"><span class="sk-icon">🎨</span><div class="sk-name">CSS/Tailwind</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="68%"></div></div><div class="sk-pct">68%</div></div>
-        <div class="skill-card glass2 rev d1"><span class="sk-icon">📐</span><div class="sk-name">HTML5</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="90%"></div></div><div class="sk-pct">90%</div></div>
-        <div class="skill-card glass2 rev d4"><span class="sk-icon">🐍</span><div class="sk-name">Python</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="55%"></div></div><div class="sk-pct">55%</div></div>
+        <div class="skill-card glass2 rev d1"><span class="sk-icon">⚛️</span><div class="sk-name">React.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="90%"></div></div><div class="sk-pct">90%</div></div>
+        <div class="skill-card glass2 rev d2"><span class="sk-icon">🟨</span><div class="sk-name">JavaScript</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="92%"></div></div><div class="sk-pct">92%</div></div>
+        <div class="skill-card glass2 rev d3"><span class="sk-icon">🔷</span><div class="sk-name">TypeScript</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="75%"></div></div><div class="sk-pct">75%</div></div>
+        <div class="skill-card glass2 rev d4"><span class="sk-icon">🎨</span><div class="sk-name">CSS/Tailwind</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="88%"></div></div><div class="sk-pct">88%</div></div>
+        <div class="skill-card glass2 rev d1"><span class="sk-icon">📐</span><div class="sk-name">HTML5</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="95%"></div></div><div class="sk-pct">95%</div></div>
+        <div class="skill-card glass2 rev d2"><span class="sk-icon">🔺</span><div class="sk-name">Next.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="72%"></div></div><div class="sk-pct">72%</div></div>
+        <div class="skill-card glass2 rev d3"><span class="sk-icon">🎭</span><div class="sk-name">Framer Motion</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="68%"></div></div><div class="sk-pct">68%</div></div>
+        <div class="skill-card glass2 rev d4"><span class="sk-icon">💅</span><div class="sk-name">Bootstrap</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="85%"></div></div><div class="sk-pct">85%</div></div>
       </div>
     </div>
     <div class="skill-panel" id="tab-backend">
       <div class="skills-grid">
-        <div class="skill-card glass2"><span class="sk-icon">🟩</span><div class="sk-name">Node.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="82%"></div></div><div class="sk-pct">62%</div></div>
-        <div class="skill-card glass2"><span class="sk-icon">🚂</span><div class="sk-name">Express.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="85%"></div></div><div class="sk-pct">55%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🟩</span><div class="sk-name">Node.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="82%"></div></div><div class="sk-pct">82%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🚂</span><div class="sk-name">Express.js</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="85%"></div></div><div class="sk-pct">85%</div></div>
         <div class="skill-card glass2"><span class="sk-icon">🐍</span><div class="sk-name">Python</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
-        <div class="skill-card glass2"><span class="sk-icon">☕</span><div class="sk-name">Java</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="65%"></div></div><div class="sk-pct">55%</div></div>
-        <div class="skill-card glass2"><span class="sk-icon">🔌</span><div class="sk-name">REST APIs</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="88%"></div></div><div class="sk-pct">50%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">☕</span><div class="sk-name">Java</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="65%"></div></div><div class="sk-pct">65%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔌</span><div class="sk-name">REST APIs</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="88%"></div></div><div class="sk-pct">88%</div></div>
         <div class="skill-card glass2"><span class="sk-icon">🔐</span><div class="sk-name">JWT / Auth</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="80%"></div></div><div class="sk-pct">80%</div></div>
         <div class="skill-card glass2"><span class="sk-icon">⚡</span><div class="sk-name">GraphQL</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="55%"></div></div><div class="sk-pct">55%</div></div>
         <div class="skill-card glass2"><span class="sk-icon">🧩</span><div class="sk-name">PHP/Laravel</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="60%"></div></div><div class="sk-pct">60%</div></div>
@@ -574,7 +570,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
         <div class="skill-card glass2"><span class="sk-icon">🐬</span><div class="sk-name">MySQL</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="82%"></div></div><div class="sk-pct">82%</div></div>
         <div class="skill-card glass2"><span class="sk-icon">🔥</span><div class="sk-name">Firebase</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="75%"></div></div><div class="sk-pct">75%</div></div>
         <div class="skill-card glass2"><span class="sk-icon">⚡</span><div class="sk-name">Supabase</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🔴</span><div class="sk-name">Redis</div><div class="sk-bar"><div class="sk-fill" style="background:var(--ghot)" data-w="55%"></div></div><div class="sk-pct">55%</div></div>
         <div class="skill-card glass2"><span class="sk-icon">📊</span><div class="sk-name">SQLite</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gfire)" data-w="70%"></div></div><div class="sk-pct">70%</div></div>
+        <div class="skill-card glass2"><span class="sk-icon">🗄️</span><div class="sk-name">Prisma ORM</div><div class="sk-bar"><div class="sk-fill" style="background:var(--gcool)" data-w="65%"></div></div><div class="sk-pct">65%</div></div>
       </div>
     </div>
     <div class="skill-panel" id="tab-tools">
@@ -694,7 +692,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
         <div><div class="rm-sec-title">Notable Projects</div><div style="font-size:0.82rem;color:var(--mt)">Hospital MS · E-Commerce Platform · Chat App · Analytics Dashboard · AI Study Tool</div></div>
       </div>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap" class="rev d3">
-        <a href="https://okewjgktegnicghmwbox.supabase.co/storage/v1/object/public/resume/RAJU.docx" class="btn btn-glow" id="resumeDownloadBtn" onclick="trackResumeDownload(event)">↓ Download PDF Resume</a>
+        <a href="https://drive.google.com/file/d/1vx9-oHdRa_MC7vrXTCFddJri5Frv5l86/view?usp=sharing" class="btn btn-glow" id="resumeDownloadBtn" onclick="trackResumeDownload(event)">↓ Download PDF Resume</a>
         <a href="#contact" class="btn btn-outline">Contact Me Instead</a>
       </div>
     </div>
@@ -713,7 +711,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
     </div>
     <div class="contact-grid">
       <div class="rev-l">
-        <div class="c-item"><div class="c-icon ci-fire">📧</div><div><div class="ci-label">Email</div><div class="ci-val" id="settingEmail">rajupawarj143@example.com</div></div></div>
+        <div class="c-item"><div class="c-icon ci-fire">📧</div><div><div class="ci-label">Email</div><div class="ci-val" id="settingEmail"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0775666d7277667066756d36333447606a666e6b2964686a">[email&#160;protected]</a></div></div></div>
         <div class="c-item"><div class="c-icon ci-cool">💬</div><div><div class="ci-label">WhatsApp</div><div class="ci-val">+91 9972989629</div></div></div>
         <div class="c-item"><div class="c-icon ci-hot">🎓</div><div><div class="ci-label">Degree</div><div class="ci-val">MCA Graduate · Available Now</div></div></div>
         <div class="c-item"><div class="c-icon ci-pk">📍</div><div><div class="ci-label">Location</div><div class="ci-val">India · Open to Remote/Relocate</div></div></div>
@@ -774,7 +772,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo">RAJU<span style="color:var(--c4)">.</span></div>
+        <div class="footer-logo">RAJU<span style="color:var(--c4)"> PAWAR</span></div>
         <p class="footer-desc">MCA Graduate & Full-Stack Developer. Building modern digital products and always learning something new.</p>
         <div class="soc-row">
           <a href="https://github.com/Rrajupawar" class="soc-btn sb-gh">🐙</a>
@@ -940,14 +938,14 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:56px 0 28px}
 <!-- ══════════════════════════════════════
      SUPABASE SDK
 ══════════════════════════════════════ -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 
 <script>
 // ══════════════════════════════════════════════
 // ⚡ SUPABASE CONFIG — YOUR CREDENTIALS
 // ══════════════════════════════════════════════
-const SUPA_URL  = 'https://fyrnyjduhpqnfldkhcwk.supabase.co';
-const SUPA_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5cm55amR1aHBxbmZsZGtoY3drIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxMTc3MzIsImV4cCI6MjA4NzY5MzczMn0.9uqC5zu4kxkpeo02KmzQThShdIsilto751pbhuDp4WY';
+const SUPA_URL  = 'https://elkxnulzlmbzugxpfshr.supabase.co';
+const SUPA_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVsa3hudWx6bG1ienVneHBmc2hyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI4MTU4MDIsImV4cCI6MjA4ODM5MTgwMn0.In_m4S4XxYGrqww57LYeZM_lgr-68-m1K7OM9WtwvK0';
 
 const sb = supabase.createClient(SUPA_URL, SUPA_ANON);
 
@@ -1137,15 +1135,24 @@ async function loadDownloadCount() {
 
 async function trackResumeDownload(e) {
   e.preventDefault();
-  await sb.from('resume_downloads').insert([{visitor_info: navigator.userAgent.substring(0,200)}]);
-  toast('📥 Resume download tracked!', 'ok');
-  // Get actual resume URL from settings
-  const {data} = await sb.from('settings').select('value').eq('key','resume_url').single();
-  const url = data?.value;
-  if(url && url !== 'https://your-resume-link.pdf') {
-    window.open(url,'_blank');
+  // Track download silently (try/await — no .catch on Supabase v2)
+  try { await sb.from('resume_downloads').insert([{visitor_info: navigator.userAgent.substring(0,200)}]); } catch(_){}
+  // 1st: check Admin → Settings → resume_url
+  let url = null;
+  try {
+    const {data} = await sb.from('settings').select('value').eq('key','resume_url').single();
+    if (data?.value && data.value.trim() !== '' && data.value !== 'https://your-resume-link.pdf') {
+      url = data.value;
+    }
+  } catch(_) {}
+  // 2nd: fallback to button href (Google Drive)
+  if (!url) url = document.getElementById('resumeDownloadBtn').getAttribute('href');
+  // Open resume
+  if (url && url !== '#') {
+    window.open(url, '_blank');
+    toast('📥 Resume opened!', 'ok');
   } else {
-    toast('⚠️ Resume URL not set. Update it in Admin → Settings.','err',4000);
+    toast('⚠️ Resume not found. Contact me directly.', 'err', 4000);
   }
   loadDownloadCount();
 }
@@ -1163,8 +1170,18 @@ async function loadPublicSettings() {
     const wn = s.whatsapp_number;
     document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.href=`https://wa.me/${wn}`);
   }
-  if(s.github_url) document.getElementById('settingGithub').href = s.github_url;
-  if(s.linkedin_url) document.getElementById('settingLinkedin').href = s.linkedin_url;
+  if(s.github_url) {
+    document.getElementById('settingGithub').href = s.github_url;
+    document.querySelectorAll('a.soc-btn.sb-gh').forEach(a=>a.href=s.github_url);
+  }
+  if(s.linkedin_url) {
+    document.getElementById('settingLinkedin').href = s.linkedin_url;
+    document.querySelectorAll('a.soc-btn.sb-li').forEach(a=>a.href=s.linkedin_url);
+  }
+  // Update resume button dynamically from settings
+  if(s.resume_url && s.resume_url !== 'https://your-resume-link.pdf') {
+    document.getElementById('resumeDownloadBtn').setAttribute('href', s.resume_url);
+  }
 }
 
 // ══════════════════════════════════════════════
